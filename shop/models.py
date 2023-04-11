@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 
-class ShopItemsWatches(models.Model):
+class ShopWatches(models.Model):
     name = models.CharField(max_length=255)
     brand = models.CharField(max_length=255)
     price = DecimalField(max_digits=10, decimal_places=2)
