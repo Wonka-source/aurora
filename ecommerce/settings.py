@@ -51,6 +51,8 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'cloudinary_storage',
     'cloudinary',
+    'crispy_forms',
+    "crispy_bootstrap4",
     'home',
 ]
 
@@ -177,3 +179,5 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"

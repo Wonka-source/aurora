@@ -1,0 +1,31 @@
+body {
+    background-image: url("../img/hreo_edited.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+   }
+
+.welcome-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; 
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.welcome{
+    text-align: center;
+    width: 80vw; 
+    margin-left: auto;
+    margin-right: auto;
+    background-color:rgb(253, 253, 253);
+}
+
+.our-services {
+    /* padding-top: 17%; */
+    text-align: center;
+    margin: 0 auto;
+}
+

@@ -5,3 +5,24 @@
 .green {
     color: green;
 }
+
+.grey{
+    color: rgb(136, 130, 130)
+}
+
+.logo-font {
+    font-family: 'Playfair Display', serif;
+}
+
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.decoration-none{
+    text-decoration: none;
+    color: rgba(0,0,0,.55);
+}
