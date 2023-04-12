@@ -6,10 +6,7 @@ from django.contrib.auth.models import User
 
 class CustomerProfile(models.Model):
 
-    username = models.OneToOneField(User, on_delete=models.CASCADE)
-    email = models.EmailField(unique=True)
-    first_name = models.CharField(max_length=100)
-    lastname = models.CharField(max_length=100)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     date_of_birth = models.DateField(null=True, blank=True)
     phone_number = models.CharField(max_length=20)
     address = models.CharField(max_length=200)    
@@ -17,18 +14,15 @@ class CustomerProfile(models.Model):
     post_code = models.CharField(max_length=25)
 
     def __str__(self):
-        return self.username.username
+        return self.user.username
 
 
-class StaffProfile(models.Model):
+# class StaffProfile(models.Model):
 
-    username = models.OneToOneField(User, on_delete=models.CASCADE)
-    email = models.EmailField(unique=True)
-    first_name = models.CharField(max_length=100)
-    lastname = models.CharField(max_length=100)
-    phone_number = models.CharField(max_length=20)
-    admin_permissions = models.BooleanField(default=False)
-    notes = models.TextField(null=True, blank=True)
+#     username = models.OneToOneField(User, on_delete=models.CASCADE)
+#     phone_number = models.CharField(max_length=20)
+#     admin_permissions = models.BooleanField(default=False)
+#     notes = models.TextField(null=True, blank=True)
 
-    def __str__(self):
-        return self.username.username
+#     def __str__(self):
+#         return self.user.username
