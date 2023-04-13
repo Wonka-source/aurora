@@ -1,0 +1,17 @@
+.text-black {
+    color: #000 !important;
+}
+
+.card-img-top {    
+    object-fit: cover;
+    object-position: center;
+    max-width: 100%;
+    height: 400px;
+    margin: 0 auto;
+}
+
+@media (min-width: 575px) {
+    .card-img-top {
+    height: 200px;
+    }
+}

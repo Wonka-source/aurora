@@ -13,4 +13,4 @@ def all_watches(request):
         'watches': watches,
     }
 
-    return render(request, 'shop/watches.html', context)
+    return render(request, 'shop/shop.html', context)

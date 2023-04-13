@@ -35,7 +35,7 @@ class Watch(models.Model):
         ('other', 'Other'),
     ))
     image_url = models.URLField(max_length=1024, null=True, blank=True)
-    image = CloudinaryField('image', default='placeholder', null=True, blank=True)
+    image = CloudinaryField(blank=True, default='placeholder')
     stock = models.IntegerField(choices=STOCK, default=0)
 
     class Meta:
