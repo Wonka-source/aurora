@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/shop.css' %}">
+{% endblock %}
+
+{% block content %}
+
+{% load cloudinary %}
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- <h2 class="col-12 text-center">{{ watch.name }}</h2> -->
+        <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+            <div class="image-container my-5">
+                {% if 'placeholder' in watch.image.url %}
+                <a href="{{ watch.image.url }}" target="_blank" class="col-4"><img src="{% static 'img/placeholder.png' %}" class="card-img-top img-fluid mb-0 p-1"
+                    alt="{{ watch.name }}"></a>
+                {% else %}
+                <a href="{{ watch.image.url }}" target="_blank" class="col-4" >{% cloudinary watch.image.url class="card-img-top img-fluid mb-0 p-3" alt=watch.name %}</a>
+                {% endif %}
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="product-details-container mb-5 mt-md-5">
+                <p class="mb-0"><span>{{ watch.brand.get_friendly_name }}</span> {{ watch.name }}</p>
+                <p class="lead mb-0 text-left font-weight-bold">${{ watch.price }}</p>
+                <p class="mt-3">{{ watch.description }}</p>
+                </div>
+            </div>
+
+
+
+{% endblock %}
