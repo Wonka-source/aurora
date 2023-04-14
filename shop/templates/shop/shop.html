@@ -14,19 +14,19 @@
 
 <div class="container mt-5">
     <div class="row">
-        {% for watch in watches %}
+        {% for product in products %}
 
         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
             <div class="card h-100 border-0">
-                {% if 'placeholder' in watch.image.url %}
-                <a href="{% url 'watch_detail' watch.id %}"><img src="{% static 'img/placeholder.png' %}" class="card-img-top img-fluid mb-0 p-1"
-                    alt="{{ watch.name }}"></a>
+                {% if 'placeholder' in product.image.url %}
+                <a href="{% url 'product_detail' product.id %}"><img src="{% static 'img/placeholder.png' %}" class="card-img-top img-fluid mb-0 p-1"
+                    alt="{{ product.name }}"></a>
                 {% else %}
-                <a href="{% url 'watch_detail' watch.id %}">{% cloudinary watch.image.url class="card-img-top img-fluid mb-0 p-3" alt=watch.name %}</a>
+                <a href="{% url 'product_detail' product.id %}">{% cloudinary product.image class="card-img-top img-fluid mb-0 p-3" alt=product.name %}</a>
                 {% endif %}
                 <div class="card-body pb-0">
-                    <a href="{% url 'watch_detail' watch.id %}"></a><h4 class="mb-1 card-title text-black">{{ watch.name }}</h4>
-                    <h5 class="mb-0  card-subtitle mb-2 text-muted">{{ watch.brand.get_friendly_name }}</h5></a>
+                    <a href="{% url 'product_detail' product.id %}"></a><h4 class="mb-1 card-title text-black">{{ product.name }}</h4>
+                    <h5 class="mb-0  card-subtitle mb-2 text-muted">{{ product.brand.get_friendly_name }}</h5></a>
                     <!-- <hr class="w-50 mb-1 my-0"> -->
                     <div class="d-flex justify-content-between align-items-center">
 
@@ -35,7 +35,7 @@
                             <!-- <a href="" class="btn btn-sm btn-outline-secondary">View</a>
                             <a href="" class="btn btn-sm btn-outline-secondary">Edit</a>                 -->
                         </div>
-                        <small class="mb-0 lead text-muted">€{{ watch.price }}</small>
+                        <small class="mb-0 lead text-muted">€{{ product.price }}</small>
                     </div>
                 </div>
             </div>

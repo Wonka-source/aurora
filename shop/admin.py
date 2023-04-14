@@ -1,19 +1,26 @@
 from django.contrib import admin
-from .models import Watch, Brand
+from .models import Product, Brand, Watch, Category, WatchStrap
 
 # Register your models here.
 
 
-class WatchAdmin(admin.ModelAdmin):
+class ProductAdmin(admin.ModelAdmin):
     list_display = (        
         'name',
         'brand',
-        'sku',
         'price',
         'image',
     )
 
     ordering = ['brand__name', 'name']
+
+
+class WatchAdmin(admin.ModelAdmin):
+    list_display = (        
+        'mechanism_type',
+        'color',
+        'material',        
+    )
 
 
 class BrandAdmin(admin.ModelAdmin):
@@ -23,7 +30,23 @@ class BrandAdmin(admin.ModelAdmin):
     )
 
 
+class WatchStrapAdmin(admin.ModelAdmin):
+    list_display = (
+        'strap_type',
+        'color',
+        'material',
+    )
+
+
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = (
+        'friendly_name',
+        'name',
+    )
+
+
+admin.site.register(WatchStrap, WatchStrapAdmin)
+admin.site.register(Product, ProductAdmin)
 admin.site.register(Watch, WatchAdmin)
 admin.site.register(Brand, BrandAdmin)
-
-
+admin.site.register(Category, CategoryAdmin)

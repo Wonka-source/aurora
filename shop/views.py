@@ -1,28 +1,29 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Watch
+from .models import Product
 
 # Create your views here.
 
 
-def all_watches(request):
-    """A view to show all watches, including sorting and search queries"""
+def all_products(request):
+    """A view to show all products, including sorting and search queries"""
 
-    watches = Watch.objects.all()
+    products = Product.objects.all()
 
     context = {
-        'watches': watches,
+        'products': products,
     }
 
     return render(request, 'shop/shop.html', context)
 
 
-def watch_detail(request, watch_id):
-    """A view to show individual watch details"""
+def product_detail(request, product_id):
+    """A view to show individual product details"""
 
-    watch = get_object_or_404(Watch, pk=watch_id)
+    product = get_object_or_404(Product, pk=product_id)
 
     context = {
-        'watch': watch,
+        'product': product,
     }
 
-    return render(request, 'shop/watch_detail.html', context)
+    return render(request, 'shop/product_detail.html', context)
+    
