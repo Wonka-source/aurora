@@ -1,8 +1,6 @@
 from django.db import models
 from cloudinary.models import CloudinaryField
 
-# Create your models here.
-
 
 class Category(models.Model):
     name = models.CharField(max_length=255)
@@ -43,50 +41,14 @@ class Product(models.Model):
     description = models.TextField()
     image = CloudinaryField('image', null=True, blank=True)
     stock = models.IntegerField(choices=STOCK, default=0)
+    type = models.CharField(max_length=50, choices=(
+        ('watch', 'Watch'),
+        ('strap', 'Watch Strap'),
+        ('tool', 'Tool'),
+    ))
 
     class Meta:
         verbose_name_plural = 'Products'
 
     def __str__(self):
         return self.name
-
-
-class Watch(models.Model):
-    product = models.OneToOneField(Product, on_delete=models.CASCADE, primary_key=True)
-    mechanism_type = models.CharField(max_length=50, choices=(
-        ('quartz', 'Quartz'),
-        ('mechanical', 'Mechanical'),
-        ('automatic', 'Automatic'),
-        ('kinetic', 'Kinetic'),
-        ('digital', 'Digital'),
-    ))
-    color = models.CharField(max_length=50, null=True, blank=True)
-    material = models.CharField(max_length=50, null=True, blank=True)
-
-    class Meta:
-        verbose_name_plural = 'Watches'
-
-    def __str__(self):
-        return self.product.name
-
-
-class WatchStrap(models.Model):
-    product = models.OneToOneField(Product, on_delete=models.CASCADE, primary_key=True)
-    strap_type = models.CharField(max_length=50, choices=(
-        ('nato', 'Nato Strap'),
-        ('zulu', 'Zulu Strap'),
-        ('perlon', 'Perlon Strap'),
-        ('leather', 'Leather Strap'),
-        ('rubber', 'Rubber Strap'),
-        ('silicone', 'Silicone Strap'),
-        ('metal', 'Metal Bracelet'),
-        ('leather', 'Leather Strap'),
-    ))
-    color = models.CharField(max_length=50, null=True, blank=True)
-    material = models.CharField(max_length=50, null=True, blank=True)
-
-    class Meta:
-        verbose_name_plural = 'Watch Straps'
-
-    def __str__(self):
-        return self.product.name
