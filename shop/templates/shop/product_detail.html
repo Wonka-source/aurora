@@ -31,7 +31,36 @@
                 <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
                     {% csrf_token %}
                     <div class="form-row">
+                        {% with product.has_sizes as s %}
+                        {% if s %}
                         <div class="col-12">
+                            <p><strong>Size:</strong></p>
+                            <select class="form-control rounded-0 w-50" name="product_size" id='id_product_size'>
+                                <option value="s">S</option>
+                                <option value="m" selected>M</option>
+                                <option value="l">L</option>
+                            </select>
+                        </div>
+                        {% endif %}
+                        {% endwith %}
+                        {% with product.has_color_option as c %}
+                        {% if c %}
+                        <div class="col-12">
+                            <p><strong>Color</strong></p>
+                            <select class="form-control rounded-0 w-50" name="product_color" id='id_product_color'>
+                                <option value="red">Red</option>
+                                <option value="black" selected>Black</option>
+                                <option value="green">Green</option>
+                                <option value="pink">Pink</option>
+                                <option value="purple">Purple</option>
+                                <option value="yellow">Yellow</option>
+                                <option value="blue">Blue</option>
+                            </select>
+                        </div>
+                       
+                        {% endif %}
+                        {% endwith %}
+                        <div class="col{% if s or c %}-12 mt-2 {% endif %}{% if s and c %}-12 mt-2 {% endif %}">
                             <p class="mt-3"><strong>Quantity:</strong></p>
                             <div class="form-group w-50">
                                 <div class="input-group">
@@ -50,6 +79,8 @@
                             <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Cart">
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        
+                        
                     </div>
                 </form>
             </div>
