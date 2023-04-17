@@ -89,8 +89,19 @@
                             <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
                         </li>
                         {% endif %}
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'view_cart' %}">Cart</a>
+                        <li class="list-inline-item nav-item">
+                            <a class="{% if grand_total %} font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_cart' %}">
+                                <div class="text-center">
+                                    <div><i class="fa fa-cart-plus" aria-hidden="true"></i></div>
+                                    <p class="my-0">
+                                        {% if grand_total %}
+                                            ${{ grand_total|floatformat:2 }}
+                                        {% else %}
+                                            $0.00
+                                        {% endif %}
+                                    </p>
+                                </div>
+                            </a>
                         </li>
                     </ul>
                 </div>

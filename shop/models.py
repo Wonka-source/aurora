@@ -46,7 +46,7 @@ class Product(models.Model):
         ('strap', 'Watch Strap'),
         ('tool', 'Tool'),
     ))
-
+    
     class Meta:
         verbose_name_plural = 'Products'
 
