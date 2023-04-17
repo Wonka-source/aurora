@@ -6,8 +6,19 @@
     color: green;
 }
 
-.grey{
+.grey {
     color: rgb(136, 130, 130)
+}
+
+.footer {
+    height: 60px;
+}
+
+.btn-outline-black {
+    background: white;
+    color: black !important;
+    /* use important to override link colors for <a> elements */
+    border: 1px solid black;
 }
 
 .logo-font {
@@ -22,7 +33,21 @@
     width: 1.5rem;
 }
 
-.decoration-none{
+.decoration-none {
     text-decoration: none;
-    color: rgba(0,0,0,.55);
+    color: rgba(0, 0, 0, .55);
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
 }

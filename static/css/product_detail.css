@@ -14,8 +14,6 @@
     text-transform: capitalize;
 }
 
-@media (min-width: 575px) {
-    .card-img-top {
-    height: 200px;
-    }
+.product-details-container{
+    margin-bottom: 60px;
 }

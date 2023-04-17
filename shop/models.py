@@ -39,7 +39,7 @@ class Product(models.Model):
     brand = models.ForeignKey(Brand, null=True, blank=True, on_delete=models.SET_NULL, related_name='products')
     price = models.DecimalField(max_digits=10, decimal_places=2)
     description = models.TextField()
-    image = CloudinaryField('image', null=True, blank=True)
+    image = CloudinaryField('image', null=True, blank=True, default='placeholder')
     stock = models.IntegerField(choices=STOCK, default=0)
     type = models.CharField(max_length=50, choices=(
         ('watch', 'Watch'),
