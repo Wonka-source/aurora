@@ -93,6 +93,7 @@ TEMPLATES = [
     },
 ]
 
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 # may not need this part but put in just incase
 
