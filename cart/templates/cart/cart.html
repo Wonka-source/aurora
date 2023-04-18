@@ -33,39 +33,74 @@
                             <th scope="col">Subtotal</th>
                         </tr>
                     </thead>
-                    
-                        {% for item in cart_items %}
-                        <tr>
-                            {% if 'placeholder' in item.product.image.url %}
-                            <td><img src="{% static 'img/placeholder.png' %}" class="img-fluid rounded" width=300 height=400 crop="limit"
-                                alt="{{ item.product.name }}"></td>
-                                {% else %}
-                            <td class="p-3 w-25"><img src="{{ item.product.image.url }}" class="img-fluid rounded" width=300 height=400 crop="limit" alt="{{ product.name }}"></td>
-                            {% endif %}
-                            <td class="py-3">
-                                <p class="my-0"><strong>{{ item.product.name }}</strong></p>                                
-                            </td>
-                            <td class="py-3">
-                                <p class="my-0">${{ item.product.price }}</p>
-                            </td>
-                            <td class="py-3 w-25">
-                                <p class="my-0">{{ item.quantity }}</p>
-                            </td>
-                            <td class="py-3">
-                                <p class="my-0">${{ item.product.price }}</p>
-                            </td>
-                        </tr>
-                        {% endfor %}
-                    
+
+                    {% for item in cart_items %}
+                    <tr>
+                        {% if 'placeholder' in item.product.image.url %}
+                        <td><img src="{% static 'img/placeholder.png' %}" class="img-fluid rounded" width=300 height=400
+                                crop="limit" alt="{{ item.product.name }}"></td>
+                        {% else %}
+                        <td class="p-3 w-25"><img src="{{ item.product.image.url }}" class="img-fluid rounded" width=300
+                                height=400 crop="limit" alt="{{ product.name }}"></td>
+                        {% endif %}
+                        <td class="py-3">
+                            <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                        </td>
+                        <td class="py-3">
+                            <p class="my-0">${{ item.product.price }}</p>
+                        </td>
+                        <td class="py-3 d-flex flex-column flex-md-row align-items-center justify-content-md-between">
+                            <form class="form update-form" method="POST" action="">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <button class="decrement-qty btn btn-sm btn-black rounded-0"
+                                                data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                                                <span>
+                                                    <i class="fas fa-minus fa-sm"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <input class="form-control form-control-sm qty_input" type="number"
+                                            name="quantity" value="{{ item.quantity }}" min="1" max="99"
+                                            data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
+                                        <div class="input-group-append">
+                                            <button class="increment-qty btn btn-sm btn-black rounded-0"
+                                                data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                                                <span>
+                                                    <i class="fas fa-plus fa-sm"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <div class="float-left">
+                                <a class="remove-item text-danger"
+                                    id="remove_{{ item.item_id }}"><small>Remove</small></a>
+                            </div>
+                            <div class="float-right">
+                                <a class="update-link text-info"><small>Update</small></a>
+                            </div>
+                        </td>
+                        <td class="py-3">
+                            <p class="my-0">${{ item.product.price }}</p>
+                        </td>
+                    </tr>
+                    {% endfor %}
+
                     <tr>
                         <td colspan="5" class="pt-5 text-right">
                             <h6><strong>Cart Total: ${{ total|floatformat:2 }}</strong></h6>
                             <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
                             <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
                             {% if free_delivery_delta > 0 %}
-                                <p class="mb-1 text-danger">
-                                    You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong> more!
-                                </p>
+                            <p class="mb-1 text-danger">
+                                You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong>
+                                more!
+                            </p>
                             {% endif %}
                         </td>
                     </tr>
@@ -87,7 +122,7 @@
                     </tr>
                 </table>
             </div>
-        {% else %}
+            {% else %}
             <p class="lead mb-5">Your Cart is empty.</p>
             <a href="{% url 'shop' %}" class="btn btn-outline-black rounded-0 btn-lg">
                 <span class="icon">
@@ -95,9 +130,37 @@
                 </span>
                 <span class="text-uppercase">Keep Shopping</span>
             </a>
-        {% endif %}
+            {% endif %}
+        </div>
     </div>
 </div>
-</div>
 
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'shop/includes/quantity_input_script.html' %}
+
+<script type="text/javascript">
+    // Update quantity on click
+    $('.update-link').click(function (e) {
+        var form = $(this).prev('.update-form');
+        form.submit();
+    })
+
+    // Remove item and reload on click
+    $('.remove-item').click(function (e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var url = `/cart/remove/${itemId}`;
+        var data = {
+            'csrfmiddlewaretoken': csrfToken,
+        };
+
+        $.post(url, data)
+            .done(function () {
+                location.reload();
+            });
+    })
+</script>
 {% endblock %}
