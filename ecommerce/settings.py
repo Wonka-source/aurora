@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'home',
     'shop',
     'cart',
+    'checkout',
 ]
 
 SITE_ID = 1
@@ -186,5 +187,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 
-FREE_DELIVERY_THRESHOLD = 50
 STANDARD_DELIVERY_PERCENTAGE = 10
