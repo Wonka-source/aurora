@@ -28,7 +28,8 @@
 
     {% block corejs %}
     <script src="https://kit.fontawesome.com/2498384427.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
     </script>
@@ -91,14 +92,15 @@
                         </li>
                         {% endif %}
                         <li class="list-inline-item nav-item">
-                            <a class="{% if grand_total %} font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_cart' %}">
+                            <a class="{% if grand_total %} font-weight-bold{% else %}text-black{% endif %} nav-link"
+                                href="{% url 'view_cart' %}">
                                 <div class="text-center">
                                     <div><i class="fa fa-cart-plus" aria-hidden="true"></i></div>
                                     <p class="my-0">
                                         {% if grand_total %}
-                                            ${{ grand_total|floatformat:2 }}
+                                        ${{ grand_total|floatformat:2 }}
                                         {% else %}
-                                            $0.00
+                                        $0.00
                                         {% endif %}
                                     </p>
                                 </div>
@@ -128,7 +130,8 @@
             <div class="row align-items-center">
                 <div class="col-12 col-md-4 text-center text-md-start mb-3 mb-md-0">
                     <a href="#" class="me-4 text-reset"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="https://www.facebook.com/people/Aurora-Watch-Experts/100091757028913/" target="_blank" class="me-4 text-reset"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.facebook.com/people/Aurora-Watch-Experts/100091757028913/" target="_blank"
+                        class="me-4 text-reset"><i class="fa-brands fa-facebook"></i></a>
                     <a href="#" class="text-reset"><i class=" icon fa-brands fa-instagram"></i></a>
                 </div>
 
