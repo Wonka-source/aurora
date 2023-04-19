@@ -6,7 +6,7 @@ class OrderForm(forms.ModelForm):
     class Meta:
         model = Order
         fields = ('full_name', 'email', 'phone_number',
-                'billing_address1', 'billing_address2',
+                'country', 'town_or_city', 'postcode',
                 'shipping_address1', 'shipping_address2',
                 'delivery_method',)
 
@@ -16,11 +16,12 @@ class OrderForm(forms.ModelForm):
             'full_name': 'Full Name',
             'email': 'Email Address',
             'phone_number': 'Phone Number',
-            'billing_address1': 'Billing Address 1',
-            'billing_address2': 'Billing Address 2',
+            'country': 'Country',
+            'town_or_city': 'Town or City',
+            'postcode': 'Postcode',
             'shipping_address1': 'Shipping Address 1',
             'shipping_address2': 'Shipping Address 2',
-            'delivery_method': 'Delivery Method',
+            
         }
 
         self.fields['full_name'].widget.attrs['autofocus'] = True

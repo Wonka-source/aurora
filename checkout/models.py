@@ -9,23 +9,26 @@ from shop.models import Product
 """
 models based on Code Institute boutique ado project
 """
+DELIVERY_METHOD = ((0, "Standard"), (1, "Express"))
 
 
 class Order(models.Model):
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True, related_name='orders')
     order_number = models.CharField(max_length=64, null=False, editable=False)
     order_date = models.DateTimeField(auto_now_add=True)
-    full_name = models.CharField(max_length=50, null=True, blank=False)
-    email = models.EmailField(max_length=254, null=True, blank=False)
-    phone_number = models.CharField(max_length=20, null=True, blank=False)
-    billing_address1 = models.CharField(max_length=89, null=True, blank=False)
-    billing_address2 = models.CharField(max_length=89, null=True, blank=True)
-    shipping_address1 = models.CharField(max_length=89, null=True, blank=False)
+    full_name = models.CharField(max_length=50, null=False, blank=False)
+    email = models.EmailField(max_length=254, null=False, blank=False)
+    phone_number = models.CharField(max_length=20, null=False, blank=False)
+    country = models.CharField(max_length=40, null=False, blank=False)
+    town_or_city = models.CharField(max_length=40, null=False, blank=False)
+    shipping_address1 = models.CharField(max_length=89, null=False, blank=False)
     shipping_address2 = models.CharField(max_length=89, null=True, blank=True)
-    delivery_method = models.CharField(max_length=50, null=True, blank=False)
-    delivery_cost = models.DecimalField(max_digits=6, decimal_places=2, null=True, default=0)
-    order_total = models.DecimalField(max_digits=10, decimal_places=2, null=True, default=0)
-    grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=True, default=0)
+    postcode = models.CharField(max_length=20, null=True, blank=True)
+    delivery_method = models.IntegerField(choices=DELIVERY_METHOD, default=0)
+    delivery_cost = models.DecimalField(max_digits=6, decimal_places=2, null=False, default=0)
+    order_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
+    grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
+    order_paid = models.BooleanField(default=False)
     fulfilled = models.BooleanField(default=False)
 
     def _generate_order_number(self):
