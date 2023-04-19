@@ -21,11 +21,11 @@ def checkout(request):
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
             'phone_number': request.POST['phone_number'],
-            'billing_address1': request.POST['billing_address1'],
-            'billing_address2': request.POST['billing_address2'],
+            'country': request.POST['country'],
+            'town_or_city': request.POST['town_or_city'],
+            'postcode': request.POST['postcode'],
             'shipping_address1': request.POST['shipping_address1'],
             'shipping_address2': request.POST['shipping_address2'],
-            'delivery_method': request.POST['delivery_method'],
         }
         order_form = OrderForm(form_data)
         if order_form.is_valid():
@@ -57,7 +57,7 @@ def checkout(request):
         cart = request.session.get('cart', {})
         if not cart:
             messages.error(request, "There's nothing in your cart at the moment")
-            return redirect(reverse('products'))
+            return redirect(reverse('shop'))
 
         current_cart = cart_contents(request)
         total = current_cart['grand_total']
