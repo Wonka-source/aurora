@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models import Sum
 from django.conf import settings
+from django_countries.fields import CountryField
 import datetime
 import uuid
 from shop.models import Product
@@ -19,7 +20,7 @@ class Order(models.Model):
     full_name = models.CharField(max_length=50, null=False, blank=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
     phone_number = models.CharField(max_length=20, null=False, blank=False)
-    country = models.CharField(max_length=40, null=False, blank=False)
+    country = CountryField(blank_label='Country *', null=False, blank=False)
     town_or_city = models.CharField(max_length=40, null=False, blank=False)
     shipping_address1 = models.CharField(max_length=89, null=False, blank=False)
     shipping_address2 = models.CharField(max_length=89, null=True, blank=True)
@@ -30,6 +31,8 @@ class Order(models.Model):
     grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
     order_paid = models.BooleanField(default=False)
     fulfilled = models.BooleanField(default=False)
+    original_cart = models.TextField(null=False, blank=True, default='')
+    stripe_pid = models.CharField(max_length=254, null=False, blank=True, default='')
 
     def _generate_order_number(self):
         """
