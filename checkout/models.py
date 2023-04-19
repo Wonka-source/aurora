@@ -12,7 +12,7 @@ models based on Code Institute boutique ado project
 
 
 class Order(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True, related_name='orders')
     order_number = models.CharField(max_length=64, null=False, editable=False)
     order_date = models.DateTimeField(auto_now_add=True)
     full_name = models.CharField(max_length=50, null=True, blank=False)
