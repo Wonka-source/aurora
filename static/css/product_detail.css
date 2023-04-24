@@ -2,7 +2,7 @@
     color: #000 !important;
 }
 
-.card-img-top {    
+.card-img-top {
     object-fit: cover;
     object-position: center;
     max-width: 100%;
@@ -10,10 +10,10 @@
     margin: 0 auto;
 }
 
-.capitalize{
+.capitalize {
     text-transform: capitalize;
 }
 
-.product-details-container{
+.product-details-container {
     margin-bottom: 60px;
 }

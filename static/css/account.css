@@ -3,18 +3,18 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-   }
+}
 
-.bg-grey{
-    background-color: rgba(39, 38, 39, 0.8);    
+.bg-grey {
+    background-color: rgba(39, 38, 39, 0.8);
     max-width: 66%;
 }
 
-.bg-solid-grey{
-    background-color: rgba(39, 38, 39, 1);    
+.bg-solid-grey {
+    background-color: rgba(39, 38, 39, 1);
     max-width: 66%;
 }
 
-.bg-smaller{
+.bg-smaller {
     max-width: 33%;
 }

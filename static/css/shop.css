@@ -2,7 +2,7 @@
     color: #000 !important;
 }
 
-.card-img-top {    
+.card-img-top {
     object-fit: cover;
     object-position: center;
     max-width: 100%;
@@ -10,12 +10,12 @@
     margin: 0 auto;
 }
 
-.capitalize{
+.capitalize {
     text-transform: capitalize;
 }
 
 @media (min-width: 575px) {
     .card-img-top {
-    height: 200px;
+        height: 200px;
     }
 }
