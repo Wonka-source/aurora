@@ -6,7 +6,7 @@ from django.conf import settings
 from .models import Order, OrderLineItem
 from shop.models import Product
 from profiles.models import UserProfile
-
+import stripe
 import json
 import time
 
@@ -47,6 +47,7 @@ class StripeWH_Handler:
         Handle the payment_intent.succeeded webhook from Stripe
         """
         intent = event.data.object
+        # print(intent) /////////////////////////////////////////
         pid = intent.id
         cart = intent.metadata.cart
         save_info = intent.metadata.save_info
@@ -91,9 +92,8 @@ class StripeWH_Handler:
                     country__iexact=shipping_details.address.country,
                     postcode__iexact=shipping_details.address.postal_code,
                     town_or_city__iexact=shipping_details.address.city,
-                    street_address1__iexact=shipping_details.address.line1,
-                    street_address2__iexact=shipping_details.address.line2,
-                    county__iexact=shipping_details.address.state,
+                    shipping_address1__iexact=shipping_details.address.line1,
+                    shipping_address2__iexact=shipping_details.address.line2,
                     grand_total=grand_total,
                     original_cart=cart,
                     stripe_pid=pid,
