@@ -17,3 +17,8 @@
 .product-details-container {
     margin-bottom: 60px;
 }
+
+.btn-dark:hover {
+    background-color: #343a40;
+    color: #fff;
+}

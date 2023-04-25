@@ -8,6 +8,9 @@ body {
 .bg-grey {
     background-color: rgba(39, 38, 39, 0.8);
     max-width: 66%;
+    margin-bottom: 100px;
+    margin-top: 65px;
+    padding-top: 0;
 }
 
 .bg-solid-grey {
@@ -17,4 +20,10 @@ body {
 
 .bg-smaller {
     max-width: 33%;
+}
+
+@media (max-width: 768px) {
+    .bg-grey {
+        max-width: 90%;
+    }
 }

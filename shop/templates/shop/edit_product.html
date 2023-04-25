@@ -6,20 +6,20 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-12 col-md-6">
-            <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2"
+            <form method="POST" action="{% url 'edit_product' product.id %}" class="form"
                 enctype="multipart/form-data">
                 {% csrf_token %}
-                {{ form | crispy }}
-                <div class="text-right">
-                    <a class="btn btn-outline-black rounded-0" href="{% url 'shop' %}">Cancel</a>
-                    <button class="btn btn-black rounded-0" type="submit">Update Product</button>
+                {{ form | crispy }}                
+                <div class=>
+                    <a class="btn btn-secondary" href="{% url 'shop' %}">Cancel</a>
+                    <button class="btn btn-success" type="submit">Update Product</button>
                 </div>
             </form>
         </div>
         <div class="col-12 col-md-6">
             <div class="image-container my-5">
                 {% if 'placeholder' in product.image.url %}
-                <a href="{{ product.image.url }}" target="_blank" class="col-4"><img
+                <a href="{{ product.image.url }}" target="_blank"><img
                         src="{% static 'img/placeholder.png' %}" class="card-img-top img-fluid mb-0 p-1"
                         alt="{{ product.name }}"></a>
                 {% else %}

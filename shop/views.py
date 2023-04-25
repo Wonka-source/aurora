@@ -36,7 +36,7 @@ def product_detail(request, product_id):
 def add_product(request):
     """ Add a product to the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
+        messages.error(request, 'Sorry, you are not authorized to do that.')
         return redirect(reverse('home'))
 
     if request.method == 'POST':
@@ -62,7 +62,7 @@ def add_product(request):
 def edit_product(request, product_id):
     """ Edit a product in the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
+        messages.error(request, 'Sorry, you are not authorized to do that.')
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
@@ -91,9 +91,22 @@ def edit_product(request, product_id):
 def delete_product(request, product_id):
     """ Delete a product from the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
+        messages.error(request, 'Sorry, you are not authorized to do that.')
         return redirect(reverse('home'))
+
     product = get_object_or_404(Product, pk=product_id)
-    product.delete()
-    messages.success(request, 'Product deleted!')
-    return redirect(reverse('shop'))
+
+    if request.method == 'POST':
+        product.delete()
+        messages.success(request, 'Product deleted!')
+        return redirect(reverse('shop'))
+    else:
+        messages.info(request, f'Are you sure you want to delete {product.name}?')
+
+    template = 'shop/delete_product.html'
+
+    context = {
+        'product': product,
+    }
+
+    return render(request, template, context)
