@@ -3,18 +3,27 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-   }
+}
 
-.bg-grey{
-    background-color: rgba(39, 38, 39, 0.8);    
+.bg-grey {
+    background-color: rgba(39, 38, 39, 0.8);
+    max-width: 66%;
+    margin-bottom: 100px;
+    margin-top: 65px;
+    padding-top: 0;
+}
+
+.bg-solid-grey {
+    background-color: rgba(39, 38, 39, 1);
     max-width: 66%;
 }
 
-.bg-solid-grey{
-    background-color: rgba(39, 38, 39, 1);    
-    max-width: 66%;
-}
-
-.bg-smaller{
+.bg-smaller {
     max-width: 33%;
+}
+
+@media (max-width: 768px) {
+    .bg-grey {
+        max-width: 90%;
+    }
 }

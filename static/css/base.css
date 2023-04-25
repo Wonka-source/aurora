@@ -10,9 +10,6 @@
     color: rgb(136, 130, 130)
 }
 
-.footer {
-    height: 60px;
-}
 
 .btn-outline-black {
     background: white;
@@ -38,18 +35,24 @@
     color: rgba(0, 0, 0, .55);
 }
 
-html,
-body {
+html {
     height: 100%;
 }
 
 body {
     display: flex;
     flex-direction: column;
+    padding-bottom: 175px;
 }
 
 .container {
     flex: 1;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 /* ------------------------------- bootstrap toasts */
@@ -71,10 +74,10 @@ body {
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
-    width: 0; 
-    height: 0; 
+    width: 0;
+    height: 0;
     border-left: 4px solid transparent;
-    border-right: 4px solid transparent; 
+    border-right: 4px solid transparent;
     border-bottom: 10px solid black;
     position: absolute;
     top: -10px;
