@@ -18,3 +18,7 @@
 .remove-item {
     cursor: pointer;
 }
+
+.img-thumbnail {
+    border: none;
+}
