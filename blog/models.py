@@ -1,5 +1,6 @@
 from django.db import models
 from profiles.models import UserProfile
+from django.utils.text import slugify
 from cloudinary.models import CloudinaryField
 from django.contrib.auth.models import User
 
