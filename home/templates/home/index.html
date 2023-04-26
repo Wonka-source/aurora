@@ -8,10 +8,19 @@
 {% block content %}
 <div class="container-fluid d-flex flex-column justify-content-center align-items-center vh-100">
     <h1 class="display-2 logo-font text-white mb-5">
+        Expert repairs
+    </h1>
+    <a href="{% url 'repairs' %}" class="btn btn-lg rounded-0 text-uppercase py-3 shop-now-button">
+        Get An Estimate
+    </a>
+
+<div class="container-fluid d-flex flex-column justify-content-center align-items-center vh-100">
+    <h1 class="display-2 logo-font text-white mb-5">
         The watch shop
     </h1>
     <a href="{% url 'shop' %}" class="btn btn-lg rounded-0 text-uppercase py-3 shop-now-button">
         Shop Now
     </a>
+</div>
 </div>
 {% endblock %}

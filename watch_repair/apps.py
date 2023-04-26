@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class RepairsServiceConfig(AppConfig):
+class WatchRepairConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'repairs_service'
+    name = 'watch_repair'

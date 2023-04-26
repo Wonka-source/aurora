@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     'cart',
     'checkout',
     'profiles',
+    'watch_repair',
 ]
 
 MIDDLEWARE = [
@@ -75,10 +76,7 @@ ROOT_URLCONF = 'ecommerce.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            TEMPLATES_DIR,
-            os.path.join(TEMPLATES_DIR, 'checkout', 'confirmation_emails'),
-            ],
+        'DIRS': [TEMPLATES_DIR, ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
