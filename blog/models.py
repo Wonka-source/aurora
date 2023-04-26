@@ -1,8 +1,7 @@
 from django.db import models
-from profiles.models import UserProfile
+from staff.models import TeamMember
 from django.utils.text import slugify
 from cloudinary.models import CloudinaryField
-from django.contrib.auth.models import User
 
 
 class Post(models.Model):
@@ -11,7 +10,7 @@ class Post(models.Model):
 
     title = models.CharField(max_length=255)
     slug = models.SlugField(unique=True, blank=True)
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="blog_posts")
+    author = models.ForeignKey(TeamMember, on_delete=models.CASCADE, related_name="blog_posts")
     featured_image = CloudinaryField('image', default='blog_placeholder')
     excerpt = models.TextField(blank=True)
     content = models.TextField()

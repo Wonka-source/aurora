@@ -60,6 +60,7 @@ INSTALLED_APPS = [
     'profiles',
     'watch_repair',
     'blog',
+    'staff',
 ]
 
 MIDDLEWARE = [

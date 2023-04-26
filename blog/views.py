@@ -1,6 +1,4 @@
 from django.shortcuts import render
-from .forms import WatchRepairForm
-# Create your views here.
 
 
 def enquiry(request):
