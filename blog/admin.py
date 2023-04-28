@@ -5,7 +5,7 @@ from .models import Post
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
 
-    fields = ('title', 'slug', 'author', 'featured_image', 'excerpt', 'content')
+    fields = ('title', 'slug', 'author', 'featured_image', 'status', 'excerpt', 'content')
 
     list_filter = ('status', 'author')
 
@@ -13,4 +13,4 @@ class PostAdmin(admin.ModelAdmin):
 
     search_fields = ('title', 'content')
     
-    ordering = ('-date_posted',)
+    ordering = ('-date_posted')

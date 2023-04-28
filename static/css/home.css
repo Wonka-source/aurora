@@ -22,3 +22,11 @@ body {
     background: #222;
     color: white;
 }
+
+.bg-grey {
+    background-color: rgba(39, 38, 39, 0.8);
+    max-width: 66%;
+    margin-bottom: 100px;
+    margin-top: 65px;
+    padding-top: 0;
+}

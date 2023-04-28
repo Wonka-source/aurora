@@ -66,10 +66,13 @@
                             <a class="nav-link" href="{% url 'home' %}">Home</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="{% url 'repairs' %}">Watch Repairs</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="{% url 'shop' %}">Shop</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'repairs' %}">Watch Repairs</a>
+                            <a class="nav-link" href="{% url 'post_list' %}">Blog</a>
                         </li>
                         {% if request.user.is_authenticated %}
                         {% if request.user.is_superuser %}
@@ -116,7 +119,6 @@
 
 
 
-
     {% if messages %}
     <div class="message-container">
         {% for message in messages %}
@@ -154,7 +156,7 @@
                     <p>&copy; 2023 Aurora. All Rights Reserved.</p>
                 </div>
                 <div class="col-12 col-md-4 text-center text-md-end">
-                    <a class="nav-link decoration-none navbar-light" href="#">Contact</a>
+                    <a class="nav-link decoration-none navbar-light" href="{% url 'about' %}">About</a>
                 </div>
             </div>
         </div>

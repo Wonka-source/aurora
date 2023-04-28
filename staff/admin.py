@@ -9,4 +9,4 @@ class TeamMemberAdmin(admin.ModelAdmin):
 
     list_display = ('user', 'position')
 
-    ordering = ('date_registered',)
+    ordering = ('date_registered')

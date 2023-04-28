@@ -12,7 +12,7 @@
         </div>
     </div>
     <div class="col-md-6 text-center mx-auto">
-        <h4>{{ product.brand.get_friendly_name }} {{ product.name }}</h4>
+        <h4 calss="text-capitalize">{{ product.brand }} {{ product.name }}</h4>
         <h4>€{{ product.price }}</h4>
         <div class="image-container my-2">
             {% if 'placeholder' in product.image.url %}
