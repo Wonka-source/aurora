@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 
 class TeamMemberAdmin(admin.ModelAdmin):
     model = TeamMember
+    readonly_fields = ('date_registered',)
     fields = ('user', 'date_registered', 'position',
               'phone_number', 'photo', 'bio')
     list_display = ('user', 'position', 'date_registered')
