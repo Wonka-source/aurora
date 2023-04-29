@@ -18,22 +18,29 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Order',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(auto_created=True,
+                 primary_key=True, serialize=False, verbose_name='ID')),
                 ('order_number', models.CharField(editable=False, max_length=64)),
                 ('order_date', models.DateTimeField(auto_now_add=True)),
                 ('full_name', models.CharField(max_length=50)),
                 ('email', models.EmailField(max_length=254)),
                 ('phone_number', models.CharField(max_length=20)),
                 ('billing_address1', models.CharField(max_length=89)),
-                ('billing_address2', models.CharField(blank=True, max_length=89, null=True)),
+                ('billing_address2', models.CharField(
+                    blank=True, max_length=89, null=True)),
                 ('shipping_address1', models.CharField(max_length=89)),
-                ('shipping_address2', models.CharField(blank=True, max_length=89, null=True)),
+                ('shipping_address2', models.CharField(
+                    blank=True, max_length=89, null=True)),
                 ('delivery_method', models.CharField(max_length=50)),
-                ('delivery_cost', models.DecimalField(decimal_places=2, default=0, max_digits=6)),
-                ('order_total', models.DecimalField(decimal_places=2, default=0, max_digits=10)),
-                ('grand_total', models.DecimalField(decimal_places=2, default=0, max_digits=10)),
+                ('delivery_cost', models.DecimalField(
+                    decimal_places=2, default=0, max_digits=6)),
+                ('order_total', models.DecimalField(
+                    decimal_places=2, default=0, max_digits=10)),
+                ('grand_total', models.DecimalField(
+                    decimal_places=2, default=0, max_digits=10)),
                 ('fulfilled', models.BooleanField(default=False)),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                ('user', models.ForeignKey(
+                    on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
             ],
             options={
                 'ordering': ['-order_date'],
@@ -42,11 +49,15 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='OrderLineItem',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(auto_created=True,
+                 primary_key=True, serialize=False, verbose_name='ID')),
                 ('quantity', models.IntegerField(default=0)),
-                ('lineitem_total', models.DecimalField(decimal_places=2, editable=False, max_digits=6)),
-                ('order', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='lineitems', to='checkout.order')),
-                ('product', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='shop.product')),
+                ('lineitem_total', models.DecimalField(
+                    decimal_places=2, editable=False, max_digits=6)),
+                ('order', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE,
+                 related_name='lineitems', to='checkout.order')),
+                ('product', models.ForeignKey(
+                    on_delete=django.db.models.deletion.CASCADE, to='shop.product')),
             ],
         ),
     ]

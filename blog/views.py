@@ -28,4 +28,3 @@ def post_detail(request, post_id):
         return render(request, template, context)
     else:
         raise PermissionDenied
-

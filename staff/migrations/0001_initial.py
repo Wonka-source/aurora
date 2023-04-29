@@ -18,12 +18,15 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='TeamMember',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(auto_created=True,
+                 primary_key=True, serialize=False, verbose_name='ID')),
                 ('position', models.CharField(max_length=255)),
                 ('bio', models.TextField(blank=True)),
-                ('photo', cloudinary.models.CloudinaryField(default='staff_placeholder', max_length=255, verbose_name='image')),
+                ('photo', cloudinary.models.CloudinaryField(
+                    default='staff_placeholder', max_length=255, verbose_name='image')),
                 ('date_registered', models.DateTimeField(auto_now_add=True)),
-                ('user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, related_name='team_member', to=settings.AUTH_USER_MODEL)),
+                ('user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE,
+                 related_name='team_member', to=settings.AUTH_USER_MODEL)),
             ],
             options={
                 'verbose_name_plural': 'Team Members',

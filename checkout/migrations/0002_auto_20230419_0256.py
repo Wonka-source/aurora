@@ -18,7 +18,8 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='order',
             name='delivery_cost',
-            field=models.DecimalField(decimal_places=2, default=0, max_digits=6, null=True),
+            field=models.DecimalField(
+                decimal_places=2, default=0, max_digits=6, null=True),
         ),
         migrations.AlterField(
             model_name='order',
@@ -38,12 +39,14 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='order',
             name='grand_total',
-            field=models.DecimalField(decimal_places=2, default=0, max_digits=10, null=True),
+            field=models.DecimalField(
+                decimal_places=2, default=0, max_digits=10, null=True),
         ),
         migrations.AlterField(
             model_name='order',
             name='order_total',
-            field=models.DecimalField(decimal_places=2, default=0, max_digits=10, null=True),
+            field=models.DecimalField(
+                decimal_places=2, default=0, max_digits=10, null=True),
         ),
         migrations.AlterField(
             model_name='order',

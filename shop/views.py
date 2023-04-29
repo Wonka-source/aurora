@@ -42,14 +42,15 @@ def add_product(request):
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
-            product = form.save() 
+            product = form.save()
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(
+                request, 'Failed to add product. Please ensure the form is valid.')
     else:
         form = ProductForm()
-        
+
     template = 'shop/add_product.html'
     context = {
         'form': form,
@@ -73,7 +74,8 @@ def edit_product(request, product_id):
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(
+                request, 'Failed to update product. Please ensure the form is valid.')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
@@ -101,7 +103,8 @@ def delete_product(request, product_id):
         messages.success(request, 'Product deleted!')
         return redirect(reverse('shop'))
     else:
-        messages.info(request, f'Are you sure you want to delete {product.name}?')
+        messages.info(
+            request, f'Are you sure you want to delete {product.name}?')
 
     template = 'shop/delete_product.html'
 

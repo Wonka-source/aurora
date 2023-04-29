@@ -22,7 +22,8 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='order',
             name='country',
-            field=models.CharField(default=django.utils.timezone.now, max_length=40),
+            field=models.CharField(
+                default=django.utils.timezone.now, max_length=40),
             preserve_default=False,
         ),
         migrations.AddField(
@@ -38,18 +39,21 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='order',
             name='town_or_city',
-            field=models.CharField(default=django.utils.timezone.now, max_length=40),
+            field=models.CharField(
+                default=django.utils.timezone.now, max_length=40),
             preserve_default=False,
         ),
         migrations.AlterField(
             model_name='order',
             name='delivery_cost',
-            field=models.DecimalField(decimal_places=2, default=0, max_digits=6),
+            field=models.DecimalField(
+                decimal_places=2, default=0, max_digits=6),
         ),
         migrations.AlterField(
             model_name='order',
             name='delivery_method',
-            field=models.IntegerField(choices=[(0, 'Standard'), (1, 'Express')], default=0),
+            field=models.IntegerField(
+                choices=[(0, 'Standard'), (1, 'Express')], default=0),
         ),
         migrations.AlterField(
             model_name='order',
@@ -64,12 +68,14 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='order',
             name='grand_total',
-            field=models.DecimalField(decimal_places=2, default=0, max_digits=10),
+            field=models.DecimalField(
+                decimal_places=2, default=0, max_digits=10),
         ),
         migrations.AlterField(
             model_name='order',
             name='order_total',
-            field=models.DecimalField(decimal_places=2, default=0, max_digits=10),
+            field=models.DecimalField(
+                decimal_places=2, default=0, max_digits=10),
         ),
         migrations.AlterField(
             model_name='order',

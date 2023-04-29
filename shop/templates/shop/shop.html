@@ -8,12 +8,7 @@
 
 {% block extra_title %} - Shop{% endblock %}
 
-
 {% block content %}
-
-
-
-<!-- https://getbootstrap.com/docs/5.1/examples/album/ -->
 
 <div class="container mt-5">
     <div class="row">
@@ -51,7 +46,6 @@
             </div>
         </div>
 
-
         <!-- from the boutique ado walkthrough -->
 
         {% if forloop.counter|divisibleby:1 %}
@@ -77,4 +71,5 @@
         {% endfor %}
     </div>
 </div>
+
 {% endblock %}

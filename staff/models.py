@@ -8,7 +8,8 @@ class TeamMember (models.Model):
     A model for staff members to be displayed on the about page.
     """
 
-    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='team_member')
+    user = models.OneToOneField(
+        User, on_delete=models.CASCADE, related_name='team_member')
     phone_number = models.CharField(max_length=20, null=True, blank=True)
     position = models.CharField(max_length=255)
     bio = models.TextField(blank=True)

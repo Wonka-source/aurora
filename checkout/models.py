@@ -15,7 +15,7 @@ DELIVERY_METHOD = ((0, "Standard"), (1, "Express"))
 
 class Order(models.Model):
     user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
-                             null=True, blank=True, related_name='orders')
+                                     null=True, blank=True, related_name='orders')
     order_number = models.CharField(max_length=64, null=False, editable=False)
     date = models.DateTimeField(auto_now_add=True)
     full_name = models.CharField(max_length=50, null=False, blank=False)

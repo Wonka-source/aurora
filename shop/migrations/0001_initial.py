@@ -16,9 +16,11 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Brand',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(auto_created=True,
+                 primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=255)),
-                ('friendly_name', models.CharField(blank=True, max_length=255, null=True)),
+                ('friendly_name', models.CharField(
+                    blank=True, max_length=255, null=True)),
             ],
             options={
                 'verbose_name_plural': 'Brands',
@@ -27,9 +29,11 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Category',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(auto_created=True,
+                 primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=255)),
-                ('friendly_name', models.CharField(blank=True, max_length=255, null=True)),
+                ('friendly_name', models.CharField(
+                    blank=True, max_length=255, null=True)),
             ],
             options={
                 'verbose_name_plural': 'Categories',
@@ -38,15 +42,21 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Product',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(auto_created=True,
+                 primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=255)),
                 ('price', models.DecimalField(decimal_places=2, max_digits=10)),
                 ('description', models.TextField()),
-                ('image', cloudinary.models.CloudinaryField(blank=True, max_length=255, null=True, verbose_name='image')),
-                ('stock', models.IntegerField(choices=[(0, 'In stock'), (1, 'Running low'), (2, 'Out of stock')], default=0)),
-                ('type', models.CharField(choices=[('watch', 'Watch'), ('strap', 'Watch Strap'), ('tool', 'Tool')], max_length=50)),
-                ('brand', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='products', to='shop.brand')),
-                ('category', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='products', to='shop.category')),
+                ('image', cloudinary.models.CloudinaryField(
+                    blank=True, max_length=255, null=True, verbose_name='image')),
+                ('stock', models.IntegerField(choices=[
+                 (0, 'In stock'), (1, 'Running low'), (2, 'Out of stock')], default=0)),
+                ('type', models.CharField(choices=[
+                 ('watch', 'Watch'), ('strap', 'Watch Strap'), ('tool', 'Tool')], max_length=50)),
+                ('brand', models.ForeignKey(blank=True, null=True,
+                 on_delete=django.db.models.deletion.SET_NULL, related_name='products', to='shop.brand')),
+                ('category', models.ForeignKey(blank=True, null=True,
+                 on_delete=django.db.models.deletion.SET_NULL, related_name='products', to='shop.category')),
             ],
             options={
                 'verbose_name_plural': 'Products',
