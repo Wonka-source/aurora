@@ -17,9 +17,11 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='WatchRepair',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(auto_created=True,
+                 primary_key=True, serialize=False, verbose_name='ID')),
                 ('timestamp', models.DateTimeField(auto_now_add=True)),
-                ('token', models.UUIDField(default=uuid.uuid4, editable=False, unique=True)),
+                ('token', models.UUIDField(
+                    default=uuid.uuid4, editable=False, unique=True)),
                 ('full_name', models.CharField(max_length=255)),
                 ('email', models.EmailField(max_length=254)),
                 ('phone_number', models.CharField(max_length=20)),
@@ -27,7 +29,8 @@ class Migration(migrations.Migration):
                 ('mechanical', models.BooleanField(default=False)),
                 ('chronograph', models.BooleanField(default=False)),
                 ('description', models.TextField()),
-                ('user_profile', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='profiles.userprofile')),
+                ('user_profile', models.ForeignKey(blank=True, null=True,
+                 on_delete=django.db.models.deletion.CASCADE, to='profiles.userprofile')),
             ],
             options={
                 'verbose_name_plural': 'Watch Repairs',

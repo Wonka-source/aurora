@@ -18,7 +18,8 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='watchrepair',
             name='priority',
-            field=models.IntegerField(choices=[(0, 'Low'), (1, 'Medium'), (2, 'High')], default=1),
+            field=models.IntegerField(
+                choices=[(0, 'Low'), (1, 'Medium'), (2, 'High')], default=1),
         ),
         migrations.AddField(
             model_name='watchrepair',
@@ -28,6 +29,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='watchrepair',
             name='status',
-            field=models.IntegerField(choices=[(0, 'New'), (1, 'In Progress'), (2, 'Complected')], default=0),
+            field=models.IntegerField(
+                choices=[(0, 'New'), (1, 'In Progress'), (2, 'Complected')], default=0),
         ),
     ]

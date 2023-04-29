@@ -10,7 +10,8 @@ class WatchRepair(models.Model):
 
     timestamp = models.DateTimeField(auto_now_add=True)
     token = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
-    user_profile = models.ForeignKey(UserProfile, on_delete=models.CASCADE, null=True, blank=True)
+    user_profile = models.ForeignKey(
+        UserProfile, on_delete=models.CASCADE, null=True, blank=True)
     full_name = models.CharField(max_length=255, null=False, blank=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
     phone_number = models.CharField(max_length=20, null=False, blank=False)
@@ -22,7 +23,7 @@ class WatchRepair(models.Model):
     staff_notes = models.TextField(default='')
     status = models.IntegerField(choices=STATUS, default=0)
     priority = models.IntegerField(choices=PRIORITY, default=1)
-    
+
     def __str__(self):
         return f"{self.full_name} ({self.token})"
 
