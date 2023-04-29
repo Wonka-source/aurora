@@ -12,11 +12,15 @@ def enquiry(request):
         if form.is_valid():
             email = form.cleaned_data['email']
             form.save()
-            messages.success(request, "Success. Your message has been submitted. We'll get back to you within 3 working days.")
+            messages.success(
+                request,
+                "Success. Your message has been submitted. We'll get back to you within 3 working days.")
             return redirect('shop')
         else:
-            messages.error(request, 'Something went wrong! Please try again! If this continues please contact support.')
-    else:    
+            messages.error(
+                request,
+                'Something went wrong! Please try again! If this continues please contact support.')
+    else:
         form = WatchRepairForm()
 
     context = {'form': form}
