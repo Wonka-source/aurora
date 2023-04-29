@@ -1,11 +1,24 @@
 {% extends "base.html" %}
 
 {% load i18n %}
+{% load account %}
+
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/account.css' %}">
+{% endblock %}
 
 {% block head_title %}{% trans "Account Inactive" %}{% endblock %}
 
 {% block content %}
-<h1>{% trans "Account Inactive" %}</h1>
+<div class="container bg-grey pb-4">
+    <div class="row mt-5">
+        <div class="col-12 col-md-8 mx-auto">
+            <h2 class="text-white text-center">{% trans "Account Inactive" %}</h2>
 
-<p>{% trans "This account is inactive." %}</p>
+            <p>{% trans "This account is inactive." %}</p>
+        </div>
+    </div>
+</div>
 {% endblock %}

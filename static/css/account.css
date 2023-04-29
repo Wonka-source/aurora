@@ -27,3 +27,7 @@ body {
         max-width: 90%;
     }
 }
+
+.col-md8 p {
+    max-width: 100%;
+}
