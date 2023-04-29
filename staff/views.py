@@ -1,11 +1,12 @@
 from django.shortcuts import render
+from .models import TeamMember
 
 
-def enquiry(request):
-    """A view that renders the watch repair enquiry page"""
+def all_staff(request):
+    """A view that renders all team members on the about page"""
 
-    form = WatchRepairForm()
+    team_members = TeamMember.objects.all()
 
-    context = {'form': form}
+    context = {'team_members': team_members}
 
-    return render(request, 'watch_repair/repairs.html', context)
+    return render(request, 'staff/about.html', context)

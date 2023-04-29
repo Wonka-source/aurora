@@ -13,4 +13,4 @@ class PostAdmin(admin.ModelAdmin):
 
     search_fields = ('title', 'content')
     
-    ordering = ('-date_posted')
+    ordering = ('-date_posted',)

@@ -1,14 +1,17 @@
 {% extends "base.html" %}
 {% load static %}
-
+{% load cloudinary %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/shop.css' %}">
 {% endblock %}
 
+{% block extra_title %} - Shop{% endblock %}
+
+
 {% block content %}
 
-{% load cloudinary %}
+
 
 <!-- https://getbootstrap.com/docs/5.1/examples/album/ -->
 

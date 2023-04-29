@@ -24,23 +24,8 @@ def post_detail(request, post_id):
     }
     if post.status == 1:
         return render(request, template, context)
-    elif (post.status == 0 or post.status == 2) and request.user.is_staff:
+    elif (post.status == 0 or post.status == 2) and request.user.is_superuser:
         return render(request, template, context)
     else:
         raise PermissionDenied
-        
-
-# def edit_post(request):
-
-#     return render(request, 'edit_post.html')
-
-
-# def delete_post(request):
-
-#     return render(request, 'delete_post.html')
-
-
-# def add_post(request):
-
-#     return render(request, 'add_post.html')
 
