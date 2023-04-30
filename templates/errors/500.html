@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+
 {% block content %}
 <div class="container header-container">
     <div class="row">
@@ -13,8 +14,8 @@
                 Internal Server Error
             </p>
             <div class="my-5">
-                <h4>Click here
-                    <a href="{% url 'shop' %}" class="btn btn-sm btn-black btn-outline-secondary">
+                <h4><i class="fa fa-arrow-left" aria-hidden="true"></i>
+                    <a href="{% url 'shop' %}" class="btn btn-sm btn-outline-secondary">
                         Back to the Watch Shop
                     </a>
                 </h4>

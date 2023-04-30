@@ -3,6 +3,9 @@ from cloudinary.models import CloudinaryField
 
 
 class Category(models.Model):
+    """
+    Model representing a product category.
+    """
     name = models.CharField(max_length=255)
     friendly_name = models.CharField(max_length=255, null=True, blank=True)
 
@@ -20,6 +23,10 @@ STOCK = ((0, "In stock"), (1, "Running low"), (2, "Out of stock"))
 
 
 class Product(models.Model):
+    """
+    Model representing a product.
+    """
+
     name = models.CharField(max_length=255)
     category = models.ForeignKey(
         Category, null=True, blank=True, on_delete=models.SET_NULL, related_name='products')

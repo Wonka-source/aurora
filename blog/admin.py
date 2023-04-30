@@ -4,9 +4,12 @@ from .models import Post
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
+    """
+    A class for rendering the Post model in the admin panel.
+    """
 
     fields = ('title', 'slug', 'author', 'featured_image',
-              'status', 'excerpt', 'content')
+              'status', 'content')
 
     list_filter = ('status', 'author')
 

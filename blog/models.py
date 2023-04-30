@@ -1,10 +1,13 @@
 from django.db import models
-from staff.models import TeamMember
 from django.utils.text import slugify
 from cloudinary.models import CloudinaryField
+from staff.models import TeamMember
 
 
 class Post(models.Model):
+    """
+    A blog post model.
+    """
 
     STATUS = ((0, "Draft"), (1, "Published"), (2, "Archived"))
 

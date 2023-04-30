@@ -7,9 +7,9 @@ from django.contrib.auth.models import User
 class TeamMemberAdmin(admin.ModelAdmin):
     model = TeamMember
     readonly_fields = ('date_registered',)
-    fields = ('user', 'date_registered', 'position',
+    fields = ('user', 'date_registered', 'name', 'position',
               'phone_number', 'photo', 'bio')
-    list_display = ('user', 'position', 'date_registered')
+    list_display = ('user', 'name', 'position', 'date_registered')
     ordering = ('date_registered',)
 
 # https://docs.djangoproject.com/en/4.2/ref/contrib/admin/#:~:text=on%20the%20user%3A-,class%20MyModelAdmin(admin.ModelAdmin)%3A,-def%20formfield_for_foreignkey(

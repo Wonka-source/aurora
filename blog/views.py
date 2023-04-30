@@ -1,12 +1,13 @@
-from django.shortcuts import render
-from .models import Post
-from django.contrib.auth.decorators import login_required
-from django.contrib.auth import PermissionDenied
 from django.shortcuts import render, get_object_or_404
-from django.contrib.auth.models import User
+from django.contrib.auth import PermissionDenied
+
+from .models import Post
 
 
 def post_list(request):
+    """
+    A view that displays a list of published blog posts.
+    """
     posts = Post.objects.filter(status=1)
     context = {
         'posts': posts
@@ -16,6 +17,9 @@ def post_list(request):
 
 
 def post_detail(request, post_id):
+    """
+    A view that displays the detail of a blog post, 
+    """
     post = get_object_or_404(Post, id=post_id)
     template = "post_detail.html"
     context = {

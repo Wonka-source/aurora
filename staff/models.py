@@ -1,15 +1,16 @@
 from django.db import models
-from cloudinary.models import CloudinaryField
 from django.contrib.auth.models import User
+from cloudinary.models import CloudinaryField
 
 
 class TeamMember (models.Model):
     """
-    A model for staff members to be displayed on the about page.
+    A model representing staff members displayed on the about page.
     """
 
     user = models.OneToOneField(
         User, on_delete=models.CASCADE, related_name='team_member')
+    name = models.CharField(max_length=255, default="")
     phone_number = models.CharField(max_length=20, null=True, blank=True)
     position = models.CharField(max_length=255)
     bio = models.TextField(blank=True)

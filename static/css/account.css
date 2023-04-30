@@ -22,12 +22,12 @@ body {
     max-width: 33%;
 }
 
+.col-md8 p {
+    max-width: 100%;
+}
+
 @media (max-width: 768px) {
     .bg-grey {
         max-width: 90%;
     }
-}
-
-.col-md8 p {
-    max-width: 100%;
 }

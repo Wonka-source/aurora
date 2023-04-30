@@ -1,9 +1,14 @@
+import uuid
+
 from django.db import models
 from profiles.models import UserProfile
-import uuid
 
 
 class WatchRepair(models.Model):
+
+    """
+    A model to represent watch repair enquires
+    """
 
     STATUS = ((0, "New"), (1, "In Progress"), (2, "Complected"))
     PRIORITY = ((0, "Low"), (1, "Medium"), (2, "High"))

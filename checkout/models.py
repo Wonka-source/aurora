@@ -1,19 +1,21 @@
+import datetime
+
 from django.db import models
-from django.contrib.auth.models import User
 from django.db.models import Sum
 from django.conf import settings
 from django_countries.fields import CountryField
-import datetime
+
 import uuid
 from shop.models import Product
 from profiles.models import UserProfile
-"""
-models based on Code Institute boutique ado project
-"""
+
 DELIVERY_METHOD = ((0, "Standard"), (1, "Express"))
 
 
 class Order(models.Model):
+    """
+    Order model based on Code Institute boutique ado project
+    """
     user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
                                      null=True, blank=True, related_name='orders')
     order_number = models.CharField(max_length=64, null=False, editable=False)
