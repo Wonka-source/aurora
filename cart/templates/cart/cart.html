@@ -39,15 +39,18 @@
                 {% if 'placeholder' in item.product.image.url %}
                 <td><img src="{% static 'img/placeholder.png' %}" class="img-fluid" crop="limit"
                         alt="{{ item.product.name }}">
+                        <p class="my-0 d-block d-sm-none text-secondary"><strong>{{ item.product.brand }}</strong></p>
                     <p class="my-0 d-block d-sm-none text-secondary"><strong>{{ item.product.name }}</strong></p>
                 </td>
                 {% else %}
                 <td class="p-3 w-25"><img src="{{ item.product.image.url }}" class="img-fluid" crop="limit"
                         alt="{{ product.name }}">
+                    <p class="my-0 d-block d-sm-none text-secondary"><strong>{{ item.product.brand }}</strong></p>    
                     <p class="my-0 d-block d-sm-none text-secondary"><strong>{{ item.product.name }}</strong></p>
                 </td>
                 {% endif %}
                 <td class="py-3">
+                    <p class="my-0 d-none d-sm-block text-secondary"><strong>{{ item.product.brand }}</strong></p>  
                     <p class="my-0 d-none d-sm-block text-secondary"><strong>{{ item.product.name }}</strong></p>
                 </td>
                 </td>

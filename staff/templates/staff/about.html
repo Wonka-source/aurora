@@ -17,11 +17,11 @@
         <div class="col-md-4 mb-4 mx-auto">
             <div class="card-img-container">
                 {% if 'staff_placeholder' in member.photo.url %}
-                <img class="card-img-top rounded-circle img-fluid mx-auto" src="{% static 'img/profile_placeholder.png' %}"
-                    alt="{{ member.user.get_full_name }}">
+                <img class="card-img-top rounded-circle img-fluid mx-auto"
+                    src="{% static 'img/profile_placeholder.png' %}" alt="{{ member.user.get_full_name }}">
                 {% else %}
                 <img class="card-img-top rounded-circle img-fluid mx-auto" src="{{ member.photo.url }}"
-                alt="{{ member.user.get_full_name }}">
+                    alt="{{ member.user.get_full_name }}">
                 {% endif %}
             </div>
             <ul></ul>

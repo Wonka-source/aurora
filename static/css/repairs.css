@@ -9,7 +9,7 @@ body {
     background-color: rgba(39, 38, 39, 0.8);
     max-width: 66%;
     margin-bottom: 100px;
-    margin-top: 65px;
+    margin-top: 10px;
     padding-top: 0;
 }
 
@@ -22,7 +22,7 @@ body {
     max-width: 33%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 925px) {
     .bg-grey {
         max-width: 90%;
     }
