@@ -36,7 +36,9 @@ DEBUG = False
 ALLOWED_HOSTS = ["proj5.herokuapp.com", "localhost"]
 
 
-
+CLOUDINARY_STORAGE = {
+    'USE_ETAG': False,
+}
 
 
 # Application definition
