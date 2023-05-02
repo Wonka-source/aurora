@@ -57,7 +57,8 @@
                 <td class="py-3">
                     <p class="my-0">€{{ item.product.price }}</p>
                 </td>
-                <td class="py-3 d-flex flex-column flex-md-row align-items-center justify-content-md-between">
+                <td class="py-3">
+                    <div class="d-flex flex-column flex-md-row align-items-center justify-content-md-between">
                     <form class="form form-inline update-form" method="POST"
                         action="{% url 'adjust_cart' item.item_id %}">
                         {% csrf_token %}
@@ -90,7 +91,7 @@
                     <a class="update-link text-info"><small>Update</small></a>
                     <a class="remove-item text-danger float-right"
                         id="remove_{{ item.item_id }}"><small>Remove</small></a>
-
+                    </div>
                 </td>
                 <td class="py-3">
                     <p class="my-0">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
@@ -107,13 +108,13 @@
             </tr>
             <tr>
                 <td colspan="5" class="text-right">
-                    <a href="{% url 'shop' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                    <a href="{% url 'shop' %}" class="btn btn-outline-black btn-lg">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>
                         <span class="text-uppercase">Keep Shopping</span>
                     </a>
-                    <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg">
+                    <a href="{% url 'checkout' %}" class="btn btn-black btn-lg">
                         <span class="text-uppercase">Secure Checkout</span>
                         <span class="icon">
                             <i class="fas fa-lock"></i>

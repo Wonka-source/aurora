@@ -9,13 +9,13 @@
     <div class="row ">
         <div class="col-12 col-md-6 mx-auto text-center">
             <hr>
+            <h2 class="mb-4">Product Management</h2>
             <h3 class="text-muted">Delete Product</h3>
             <hr>
         </div>
     </div>
-    <div class="col-md-6 text-center mx-auto">
-        <h4 calss="text-capitalize">{{ product.brand }} {{ product.name }}</h4>
-        <h4>€{{ product.price }}</h4>
+    <div class="col-md-6 mx-auto">
+        <h4 calss="text-capitalize text-center">{{ product.brand }} {{ product.name }}</h4>
         <div class="image-container my-2">
             {% if 'placeholder' in product.image.url %}
             <a href="{{ product.image.url }}" target="_blank" class="col-4"><img
@@ -25,13 +25,14 @@
             <a href="{{ product.image.url }}" target="_blank"
                 class="col-4">{% cloudinary product.image.url class="card-img-top img-fluid mb-0 p-3" alt=product.name %}</a>
             {% endif %}
+            <h4>€{{ product.price }}</h4>
             <p class="mt-3">{{ product.description }}</p>
-            <div class="container pb-4">
-                <div class="row mt-5">
+            <div class="container pb-4 text-center">
+                <div class="row mt-5 bg-danger text-white">
                     <div class="">
-                        <h3 class="">Delete</h3>
+                        <h3>Delete</h3>
 
-                        <p class="">Are you sure you want to delete this product? </p>
+                        <p>Are you sure you want to delete this product? </p>
                     </div>
                 </div>
                 <div class="row">

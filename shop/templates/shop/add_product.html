@@ -4,9 +4,9 @@
 {% block extra_title %} - Add Product{% endblock %}
 
 {% block content %}
-<div class="container">
+<div class="container-fluid p-1 w-100">
     <div class="row">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-6 mx-auto text-center">
             <hr>
             <h2 class="mb-4">Product Management</h2>
             <h3 class="text-muted">Add a Product</h3>
@@ -15,7 +15,7 @@
     </div>
 
     <div class="row">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-6 mx-auto">
             <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form | crispy }}

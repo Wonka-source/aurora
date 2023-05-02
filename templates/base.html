@@ -60,7 +60,7 @@
 <body>
 
     <header>
-        <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid container-lg w-100">
                 <a class="navbar-brand" href="{% url 'home' %}">
                     <h2 class="logo-font my-0"><span class="green"><strong>Aurora</strong></span> <span
@@ -74,48 +74,62 @@
                 <div class="collapse navbar-collapse m-4" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-md-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'home' %}">Home</a>
+                            <a class="nav-link text-center {% if request.path == '/' %}active{% endif %}"
+                                href="{% url 'home' %}"><i class="fa-solid fa-house"></i><br> Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'repairs' %}">Watch Repairs</a>
+                            <a class="nav-link text-center {% if request.path == '/shop/' %}active{% endif %}"
+                                href="{% url 'shop' %}"><i class="fa-solid fa-shop"></i><br>
+                                Shop</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'shop' %}">Shop</a>
+                            <a class="nav-link text-center {% if request.path == '/watch_repair/' %}active{% endif %}"
+                                href="{% url 'repairs' %}"><i class="fa-solid fa-wrench"></i> <br>Repairs</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'post_list' %}">Blog</a>
+                            <a class="nav-link text-center {% if request.path == '/blog/' %}active{% endif %}"
+                                href="{% url 'post_list' %}"><i class="fa-solid fa-blog"></i><br> Blog</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'about' %}">About Us</a>
+                            <a class="nav-link text-center {% if request.path == '/staff/about/' %}active{% endif %}"
+                                href="{% url 'about' %}"><i class="fa-sharp fa-solid fa-book"></i><br>About Us</a>
                         </li>
                         {% if request.user.is_authenticated %}
                         {% if request.user.is_superuser %}
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'add_product' %}">Add Product</a>
+                            <a class="nav-link text-center {% if request.path == '/shop/add/' %}active{% endif %}"
+                                href="{% url 'add_product' %}"><i class="fa-sharp fa-solid fa-plus"></i><br>Add
+                                Product</a>
                         </li>
                         {% endif %}
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'profile' %}">My Profile</a>
+                            <a class="nav-link text-center {% if request.path == '/profile/' %}active{% endif %}"
+                                href="{% url 'profile' %}"><i class="fa-solid fa-user"></i><br>My Profile</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                            <a class="nav-link text-center {% if request.path == '/accounts/logout/' %}active{% endif %}"
+                                href="{% url 'account_logout' %}"><i
+                                    class="fa-solid fa-arrow-right-from-bracket"></i><br>Logout</a>
                         </li>
                         {% else %}
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                            <a class="nav-link text-center {% if request.path == '/accounts/login/' %}active{% endif %}"
+                                href="{% url 'account_login' %}"><i
+                                    class="fa-solid fa-right-to-bracket"></i><br>Login</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+                            <a class="nav-link text-center {% if request.path == '/accounts/signup/' %}active{% endif %}"
+                                href="{% url 'account_signup' %}"><i class="fa-solid fa-user-plus"></i><br>Register</a>
                         </li>
                         {% endif %}
                         <li class="list-inline-item nav-item">
-                            <a class="{% if grand_total %} font-weight-bold{% else %}text-black{% endif %} nav-link"
+                            <a class="nav-link {% if request.path == '/cart/' %}active{% endif %}"
                                 href="{% url 'view_cart' %}">
-                                <div class="text-center">
+                                <div class="text-center ">
                                     <div><i class="fa fa-cart-plus" aria-hidden="true"></i></div>
                                     <p class="my-0">
                                         {% if grand_total %}
-                                        ${{ grand_total|floatformat:2 }}
+                                        €{{ grand_total|floatformat:2 }}
                                         {% else %}
                                         €0.00
                                         {% endif %}
@@ -130,7 +144,24 @@
 
     </header>
 
+    {% block messages %}
 
+    {% if form.errors %}
+    <div class="d-flex justify-content-around">
+    <div class="alert alert-danger" role="alert">
+        {% for field, errors in form.errors.items %}
+            {% for error in errors %}
+                {{ error }}
+            {% endfor %}
+        {% endfor %}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+</div>
+
+    
+{% endif %}
+
+{% endblock %}
     {% if messages %}
     <div class="message-container">
         {% for message in messages %}
@@ -159,13 +190,16 @@
             <div class="row align-items-center">
                 <div class="col-12 col-md-4 text-center text-md-start mb-3 mb-md-0">
                     <a href="https://www.facebook.com/people/Aurora-Watch-Experts/100091757028913/" target="_blank"
-                        class="me-4 text-reset"><i class="fab fa-facebook-square"></i> Follow us on Facebook!</a>
-                    <p class="mb-0">Contact: (+353) 01 4242424</p>
+                        class="me-4 text-reset">Follow us on Facebook <i class="fab fa-facebook-square"></i> </a>
+                    <p class="mb-0">Contact: <br> (+353) 01 4242424</p>
+                    <p>aurora.watch.experts@aurora.ie</p>
                 </div>
-                <div class="col-12 col-md-4 text-center mb-1 mb-md-0">
-                    <p class="m-0">Sign up to our monthly newsletter</p>
+                {% if request.path == '/' %}
+                <div class="col-12 col-md-4 text-center mb-1 mb-md-0 ">
+                    <p class="m-0">Sign up for our newsletter <i class="fa-regular fa-envelope"></i></p>
                 </div>
                 <div class="col-12 col-md-4 text-center text-md-end">
+
                     <div id="mc_embed_signup">
                         <form
                             action="https://herokuapp.us8.list-manage.com/subscribe/post?u=a3e0625dda90dad5e4aaffe53&amp;id=837444902d&amp;f_id=00b87ee0f0"
@@ -179,7 +213,7 @@
                                         <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
                                     </div>
                                 </div>
-                                
+
                                 <div class="col-4 col-md-6 text-end">
                                     <div class="clear foot">
                                         <input type="submit" value="Subscribe" name="subscribe"
@@ -187,7 +221,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div id="mce-responses" class="clear foot">
                                 <div class="response" id="mce-error-response" style="display:none"></div>
                                 <div class="response" id="mce-success-response" style="display:none"></div>
@@ -199,20 +233,32 @@
                         </form>
                     </div>
                     <!--End mc_embed_signup-->
+                    {% else %}
+                    <div class="col-12 col-md-4 text-center text-md-end">
+                        <p>&copy; 2023 Aurora. All Rights Reserved.</p>
+                    </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
     </footer>
 
+
+
+
+
+
+
     <!-- /.footer -->
 
 
     {% block postloadjs %}
-    <script type="text/javascript">
+    <script>
         $(document).ready(function () {
             $('.toast').toast('show');
         });
     </script>
+
     <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'>
     </script>
     <script type='text/javascript'>
