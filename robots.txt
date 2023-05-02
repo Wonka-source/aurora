@@ -3,9 +3,4 @@ Disallow: /admin/
 Disallow: /accounts/
 Disallow: /cart/
 Disallow: /checkout/
-Disallow: /profiles/
-Disallow: /watch_repair/
-Disallow: /add_product/
-Disallow: /edit_product/
-Disallow: /delete_product/
 Sitemap: https://proj5.herokuapp.com/sitemap.xml

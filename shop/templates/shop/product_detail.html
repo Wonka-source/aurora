@@ -27,7 +27,8 @@
         <div class="col-12 col-md-6 col-lg-4">
             <div class="product-details-container mb-5 mt-md-5">
                 <h3 class="mb-0 capitalize"><span>{{ product.brand }}</span> {{ product.name }}</h3>
-                <h7 class="mb-0 text-capitalize card-subtitle text-muted small ">{{ product.category.friendly_name }}</h7>
+                <h7 class="mb-0 text-capitalize card-subtitle text-muted small ">{{ product.category.friendly_name }}
+                </h7>
                 <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}</p>
                 {% if request.user.is_superuser %}
                 <small class="ml-3">

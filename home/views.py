@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from pathlib import PosixPath
+from django.shortcuts import render, redirect
 
 
 def index(request):

@@ -14,7 +14,7 @@ def enquiry(request):
             messages.success(
                 request,
                 "Success. Your message has been submitted. We'll get back to you within 3 working days.")
-            return redirect('shop')
+            return redirect('post_list')
         else:
             messages.error(
                 request,

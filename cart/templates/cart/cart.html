@@ -39,18 +39,18 @@
                 {% if 'placeholder' in item.product.image.url %}
                 <td><img src="{% static 'img/placeholder.png' %}" class="img-fluid" crop="limit"
                         alt="{{ item.product.name }}">
-                        <p class="my-0 d-block d-sm-none text-secondary"><strong>{{ item.product.brand }}</strong></p>
+                    <p class="my-0 d-block d-sm-none text-secondary"><strong>{{ item.product.brand }}</strong></p>
                     <p class="my-0 d-block d-sm-none text-secondary"><strong>{{ item.product.name }}</strong></p>
                 </td>
                 {% else %}
                 <td class="p-3 w-25"><img src="{{ item.product.image.url }}" class="img-fluid" crop="limit"
                         alt="{{ product.name }}">
-                    <p class="my-0 d-block d-sm-none text-secondary"><strong>{{ item.product.brand }}</strong></p>    
+                    <p class="my-0 d-block d-sm-none text-secondary"><strong>{{ item.product.brand }}</strong></p>
                     <p class="my-0 d-block d-sm-none text-secondary"><strong>{{ item.product.name }}</strong></p>
                 </td>
                 {% endif %}
                 <td class="py-3">
-                    <p class="my-0 d-none d-sm-block text-secondary"><strong>{{ item.product.brand }}</strong></p>  
+                    <p class="my-0 d-none d-sm-block text-secondary"><strong>{{ item.product.brand }}</strong></p>
                     <p class="my-0 d-none d-sm-block text-secondary"><strong>{{ item.product.name }}</strong></p>
                 </td>
                 </td>
@@ -59,38 +59,38 @@
                 </td>
                 <td class="py-3">
                     <div class="d-flex flex-column flex-md-row align-items-center justify-content-md-between">
-                    <form class="form form-inline update-form" method="POST"
-                        action="{% url 'adjust_cart' item.item_id %}">
-                        {% csrf_token %}
-                        <div class="form-group input-group-vertical">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <button class="decrement-qty btn btn-sm btn-black rounded-0"
-                                        data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
-                                        <span>
-                                            <i class="fas fa-minus fa-sm"></i>
-                                        </span>
-                                    </button>
-                                </div>
-                                <input class="form-control form-control-sm qty_input mx-sm-3" type="number"
-                                    name="quantity" value="{{ item.quantity }}" min="1" max="99"
-                                    data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
-                                <div class="input-group-append">
-                                    <button class="increment-qty btn btn-sm btn-black rounded-0"
-                                        data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
-                                        <span>
-                                            <i class="fas fa-plus fa-sm"></i>
-                                        </span>
-                                    </button>
+                        <form class="form form-inline update-form" method="POST"
+                            action="{% url 'adjust_cart' item.item_id %}">
+                            {% csrf_token %}
+                            <div class="form-group input-group-vertical">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <button class="decrement-qty btn btn-sm btn-black rounded-0"
+                                            data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                                            <span>
+                                                <i class="fas fa-minus fa-sm"></i>
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <input class="form-control form-control-sm qty_input mx-sm-3" type="number"
+                                        name="quantity" value="{{ item.quantity }}" min="1" max="99"
+                                        data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
+                                    <div class="input-group-append">
+                                        <button class="increment-qty btn btn-sm btn-black rounded-0"
+                                            data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                                            <span>
+                                                <i class="fas fa-plus fa-sm"></i>
+                                            </span>
+                                        </button>
 
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                    </form>
-                    <a class="update-link text-info"><small>Update</small></a>
-                    <a class="remove-item text-danger float-right"
-                        id="remove_{{ item.item_id }}"><small>Remove</small></a>
+                        </form>
+                        <a class="update-link text-info"><small>Update</small></a>
+                        <a class="remove-item text-danger float-right"
+                            id="remove_{{ item.item_id }}"><small>Remove</small></a>
                     </div>
                 </td>
                 <td class="py-3">

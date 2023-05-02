@@ -63,8 +63,8 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid container-lg w-100">
                 <a class="navbar-brand" href="{% url 'home' %}">
-                    <h2 class="logo-font my-0"><span class="green"><strong>Aurora</strong></span> <span
-                            class="grey">Watch Experts</span></h2>
+                    <h1 class="logo-font my-0"><span class="green"><strong>Aurora</strong></span> <span
+                            class="grey">Watch Experts</span></h1>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -148,20 +148,20 @@
 
     {% if form.errors %}
     <div class="d-flex justify-content-around">
-    <div class="alert alert-danger" role="alert">
-        {% for field, errors in form.errors.items %}
+        <div class="alert alert-danger" role="alert">
+            {% for field, errors in form.errors.items %}
             {% for error in errors %}
-                {{ error }}
+            {{ error }}
             {% endfor %}
-        {% endfor %}
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            {% endfor %}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
     </div>
-</div>
 
-    
-{% endif %}
 
-{% endblock %}
+    {% endif %}
+
+    {% endblock %}
     {% if messages %}
     <div class="message-container">
         {% for message in messages %}
@@ -190,13 +190,14 @@
             <div class="row align-items-center">
                 <div class="col-12 col-md-4 text-center text-md-start mb-3 mb-md-0">
                     <a href="https://www.facebook.com/people/Aurora-Watch-Experts/100091757028913/" target="_blank"
-                        class="me-4 text-reset">Follow us on Facebook <i class="fab fa-facebook-square"></i> </a>
-                    <p class="mb-0">Contact: <br> (+353) 01 4242424</p>
+                        class="m-0 p-0 text-reset">Follow us on Facebook <i class="fab fa-facebook-square"></i> </a>
                     <p>aurora.watch.experts@aurora.ie</p>
                 </div>
                 {% if request.path == '/' %}
                 <div class="col-12 col-md-4 text-center mb-1 mb-md-0 ">
                     <p class="m-0">Sign up for our newsletter <i class="fa-regular fa-envelope"></i></p>
+                    <a href="https://www.privacypolicygenerator.info/live.php?token=w8g26lERnVGIq3QValsPcMI56jTzFGBX"
+                        target="_blank" class="text-reset">Privacy Policy</a>
                 </div>
                 <div class="col-12 col-md-4 text-center text-md-end">
 
@@ -234,8 +235,10 @@
                     </div>
                     <!--End mc_embed_signup-->
                     {% else %}
-                    <div class="col-12 col-md-4 text-center text-md-end">
-                        <p>&copy; 2023 Aurora. All Rights Reserved.</p>
+                    <div class="col-12 col-md-4 text-center text-md-end m-0 p-0">
+                        <p>&copy; 2023 Aurora Watch Experts. All Rights Reserved.</p>
+                        <a href="https://www.privacypolicygenerator.info/live.php?token=w8g26lERnVGIq3QValsPcMI56jTzFGBX"
+                        target="_blank" class="text-reset">Privacy Policy</a>
                     </div>
                     {% endif %}
                 </div>

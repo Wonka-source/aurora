@@ -2,3 +2,9 @@
     background-color: #000000;
     color: #fff;
 }
+
+
+
+.image-container {
+    max-width:50%;
+}

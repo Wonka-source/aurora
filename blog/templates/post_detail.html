@@ -9,27 +9,28 @@
     <div class="row">
         <div class="col-12 col-md-6 mx-auto">
             <hr>
-            <h3 class="text-muted">{{ post.title }}</h3>
+            <h3 class="text-muted text-center">{{ post.title }}</h3>
             <hr>
         </div>
     </div>
     <div class="col-md-6 mx-auto">
-        <div class="image-container my-2">
+        <div class="image-container my-2 text-center">
             {% if 'placeholder' in post.featured_image.url %}
             <a href="{{ post.featured_image.url }}" target="_blank" class="col-4"><img
-                    src="{% static 'img/placeholder.png' %}" class="card-img-top img-fluid mb-0 p-1"
-                    alt="{{ post.title }}"></a>
+                    src="{% static 'img/placeholder.png' %}" height=300 width=500 crop="fill"
+                    class="img-fluid text-center" alt="{{ post.title }}"></a>
             {% else %}
             <a href="{{ post.featured_image.url }}" target="_blank"
-                class="col-4">{% cloudinary post.featured_image class="card-img-top img-fluid mb-0 p-3" alt=post.title %}</a>
+                class="col-4">{% cloudinary post.featured_image height=800 width=580 crop="fill" class="img-fluid text-center"  alt=post.title %}</a>
             {% endif %}
         </div>
         <div class="container pb-4">
             <div class="row mt-5">
-                <p class="text-muted">Posted by {{ post.author }} on {{ post.date_posted|date:"F d, Y" }}</p>
+                <p class="text-muted d-flex justify-content-around">Posted by {{ post.author }} on
+                    {{ post.date_posted|date:"F d, Y" }}</p>
             </div>
             <div class="row">
-                <div class="col-md-8 mt-3 mx-auto w-100">
+                <div class="col-md-8 mt-3 mx-auto">
                     <p>{{ post.content }}</p>
                 </div>
             </div>
