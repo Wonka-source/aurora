@@ -18,7 +18,7 @@ def post_list(request):
 
 def post_detail(request, post_id):
     """
-    A view that displays the detail of a blog post, 
+    A view that displays the detail of a blog post,
     """
     post = get_object_or_404(Post, id=post_id)
     template = "post_detail.html"

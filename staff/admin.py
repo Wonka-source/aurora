@@ -12,8 +12,6 @@ class TeamMemberAdmin(admin.ModelAdmin):
     list_display = ('user', 'name', 'position', 'date_registered')
     ordering = ('date_registered',)
 
-# https://docs.djangoproject.com/en/4.2/ref/contrib/admin/#:~:text=on%20the%20user%3A-,class%20MyModelAdmin(admin.ModelAdmin)%3A,-def%20formfield_for_foreignkey(
-
     def formfield_for_foreignkey(self, db_field, request, **kwargs):
         if db_field.name == "user":
             kwargs["queryset"] = User.objects.filter(is_staff=True)

@@ -29,7 +29,12 @@ class Product(models.Model):
 
     name = models.CharField(max_length=255)
     category = models.ForeignKey(
-        Category, null=True, blank=True, on_delete=models.SET_NULL, related_name='products')
+        Category,
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name='products'
+        )
     brand = models.CharField(max_length=255, default='')
     price = models.DecimalField(max_digits=10, decimal_places=2)
     description = models.TextField()
