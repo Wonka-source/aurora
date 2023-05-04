@@ -4,6 +4,7 @@
 <html lang="en">
 
 <head>
+    <title>Aurora Watch Experts{% block extra_title %} {% endblock %}</title>
     {% block meta %}
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
@@ -52,8 +53,6 @@
 
     {% block extra_js %}
     {% endblock %}
-
-    <title>Aurora Watch Experts{% block extra_title %} {% endblock %}</title>
 
 </head>
 
@@ -190,8 +189,10 @@
             <div class="row align-items-center">
                 <div class="col-12 col-md-4 text-center text-md-start mb-3 mb-md-0">
                     <a href="https://www.facebook.com/people/Aurora-Watch-Experts/100091757028913/" target="_blank"
-                        class="m-0 p-0 text-reset">Follow us on Facebook <i class="fab fa-facebook-square"></i> </a>
+                        class="m-0 p-0 text-reset">Follow us on Facebook <i class="fab fa-facebook-square"></i> </a>&nbsp
+                        {% if not request.path == '/' %}
                     <p>aurora.watch.experts@aurora.ie</p>
+                    {% endif %}
                     <a href="https://www.privacypolicygenerator.info/live.php?token=w8g26lERnVGIq3QValsPcMI56jTzFGBX"
                     target="_blank" class="text-reset">Privacy Policy</a>
                 </div>
@@ -237,13 +238,10 @@
                     {% else %}
                     <div class="col-12 col-md-4 text-center text-md-end m-0 p-0">
                         <p>&copy; 2023 Aurora Watch Experts. All Rights Reserved.</p>
-                        <a href="https://www.privacypolicygenerator.info/live.php?token=w8g26lERnVGIq3QValsPcMI56jTzFGBX"
-                        target="_blank" class="text-reset">Privacy Policy</a>
-                    </div>
                     {% endif %}
                 </div>
             </div>
-        </div>
+        </div>z
     </footer>
 
 

@@ -36,3 +36,4 @@ def cart_contents(request):
     }
 
     return context
+

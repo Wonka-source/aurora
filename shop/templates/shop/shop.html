@@ -12,6 +12,8 @@
 
 <div class="container mt-5">
     <div class="row">
+        <h2 class="text-center mb-3">The Watch Shop</h2>
+        <hr>
         {% for product in products %}
 
         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
@@ -25,8 +27,8 @@
                 {% endif %}
                 <div class="card-body pb-0">
                     <a href="{% url 'product_detail' product.id %}" class="text-decoration-none">
-                        <h4 class="mb-1 card-title text-black">{{ product.name }}</h4>
-                        <h5 class="mb-0 capitalize card-subtitle text-muted">{{ product.brand }}</h5>
+                        <h3 class="mb-1 card-title text-black">{{ product.name }}</h3>
+                        <h4 class="mb-0 capitalize card-subtitle text-muted">{{ product.brand }}</h4>
                     </a><br>
                     <a href="{% url 'product_detail' product.id %}" class="btn btn-sm btn-outline-secondary">View
                         Product</a>
@@ -40,8 +42,8 @@
                         <small class="mb-0 lead text-muted">€{{ product.price }}</small>
 
                     </div>
-                    <h7 class="mb-0 capitalize card-subtitle text-muted small ">{{ product.category.friendly_name }}
-                    </h7>
+                    <p class="mb-0 capitalize card-subtitle text-muted small ">{{ product.category.friendly_name }}
+                    </p>
                 </div>
             </div>
         </div>

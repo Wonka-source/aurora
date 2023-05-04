@@ -10,7 +10,7 @@
 
 {% block content %}
 
-<div class="container mx-auto">
+<div class="container mx-auto mb-5 pb-5">
     <h2 class="text-center mb-5">Meet Our Team</h2>
     <div class="row mx-auto">
         {% for member in team_members %}
@@ -26,9 +26,9 @@
             </div>
             <ul></ul>
             <div class="card-body">
-                <h5 class="card-title">{{ member.name }}</h5>
+                <h6 class="card-title">{{ member.name }}</h6>
                 <ul></ul>
-                <h6 class="card-subtitle mb-2 text-muted">{{ member.position }}</h6>
+                <h5 class="card-subtitle mb-2 text-muted">{{ member.position }}</h5>
                 <p class="card-text">{{ member.bio }}</p>
             </div>
         </div>
