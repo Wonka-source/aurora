@@ -37,7 +37,7 @@
                         class="card-img-top img-fluid mb-0 p-1" alt="{{ product.name }}"></a>
                 {% else %}
                 <a href="{{ product.image.url }}" target="_blank"
-                    class="col-4">{% cloudinary product.image.url class="card-img-top img-fluid mb-0 p-3" alt=product.name %}</a>
+                    class="col-4">{% cloudinary product.image.url class="card-img-top img-fluid mb-0 p-3" alt=product.name options="q_auto" %}</a>
                 {% endif %}
             </div>
         </div>

@@ -110,16 +110,18 @@ def delete_product(request, product_id):
 
     if request.method == 'POST':
         product.delete()
+
+        cart = request.session.get('cart', {})
+        for item_id in list(cart.keys()):
+            if int(item_id) == product_id:
+                del cart[item_id]
+        request.session['cart'] = cart
+
         messages.success(request, 'Product deleted!')
         return redirect(reverse('shop'))
     else:
-        messages.info(
-            request, f'Are you sure you want to delete {product.name}?')
+        messages.info(request, f'Are you sure you want to delete {product.name}?')
 
     template = 'shop/delete_product.html'
-
-    context = {
-        'product': product,
-    }
-
+    context = {'product': product}
     return render(request, template, context)
