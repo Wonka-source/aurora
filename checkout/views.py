@@ -156,9 +156,9 @@ def checkout_success(request, order_number):
             user_profile_form = UserProfileForm(profile_data, instance=profile)
             if user_profile_form.is_valid():
                 user_profile_form.save()
-
+    order_number_truncated = str(order_number)[:6]
     messages.success(request, f'Order successfully processed! \
-        Your order number is {order_number}. A confirmation \
+        Your order number is {order_number_truncated}. A confirmation \
         email will be sent to {order.email}.')
 
     if 'cart' in request.session:

@@ -9,92 +9,102 @@
 
 <url>
   <loc>https://proj5.herokuapp.com/</loc>
-  <lastmod>2023-04-30T05:40:10+00:00</lastmod>
+  <lastmod>2023-05-03T03:23:29+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://proj5.herokuapp.com/shop/</loc>
-  <lastmod>2023-04-30T05:40:10+00:00</lastmod>
+  <lastmod>2023-05-03T03:23:29+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://proj5.herokuapp.com/watch_repair/</loc>
+  <lastmod>2023-05-03T03:23:29+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://proj5.herokuapp.com/blog/</loc>
-  <lastmod>2023-04-30T05:40:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://proj5.herokuapp.com/accounts/login/</loc>
-  <lastmod>2023-04-30T05:40:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://proj5.herokuapp.com/accounts/signup/</loc>
-  <lastmod>2023-04-30T05:40:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://proj5.herokuapp.com/cart/</loc>
-  <lastmod>2023-04-30T05:40:10+00:00</lastmod>
+  <lastmod>2023-05-03T03:23:29+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://proj5.herokuapp.com/staff/about/</loc>
-  <lastmod>2023-04-30T05:40:10+00:00</lastmod>
+  <lastmod>2023-05-03T03:23:29+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://proj5.herokuapp.com/shop/product/5/</loc>
-  <lastmod>2023-04-30T05:40:10+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://proj5.herokuapp.com/accounts/login/</loc>
+  <lastmod>2023-05-03T03:23:29+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://proj5.herokuapp.com/shop/product/6/</loc>
-  <lastmod>2023-04-30T05:40:10+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://proj5.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2023-05-03T03:23:29+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://proj5.herokuapp.com/shop/product/7/</loc>
-  <lastmod>2023-04-30T05:40:10+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://proj5.herokuapp.com/cart/</loc>
+  <lastmod>2023-05-03T03:23:29+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://proj5.herokuapp.com/shop/product/8/</loc>
-  <lastmod>2023-04-30T05:40:10+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://proj5.herokuapp.com/shop/product/9/</loc>
-  <lastmod>2023-04-30T05:40:10+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://proj5.herokuapp.com/shop/product/10/</loc>
-  <lastmod>2023-04-30T05:40:10+00:00</lastmod>
+  <lastmod>2023-05-03T03:23:29+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://proj5.herokuapp.com/shop/product/11/</loc>
-  <lastmod>2023-04-30T05:40:10+00:00</lastmod>
+  <lastmod>2023-05-03T03:23:29+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://proj5.herokuapp.com/shop/product/9/</loc>
+  <lastmod>2023-05-03T03:23:29+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://proj5.herokuapp.com/shop/product/10/</loc>
+  <lastmod>2023-05-03T03:23:29+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://proj5.herokuapp.com/shop/product/7/</loc>
+  <lastmod>2023-05-03T03:23:29+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://proj5.herokuapp.com/shop/product/6/</loc>
+  <lastmod>2023-05-03T03:23:29+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://proj5.herokuapp.com/shop/product/14/</loc>
+  <lastmod>2023-05-03T03:23:29+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://proj5.herokuapp.com/shop/product/5/</loc>
+  <lastmod>2023-05-03T03:23:29+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://proj5.herokuapp.com/shop/product/12/</loc>
-  <lastmod>2023-04-30T05:40:10+00:00</lastmod>
+  <lastmod>2023-05-03T03:23:29+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://proj5.herokuapp.com/shop/product/13/</loc>
-  <lastmod>2023-04-30T05:40:10+00:00</lastmod>
+  <lastmod>2023-05-03T03:23:29+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://proj5.herokuapp.com/blog/post/9/</loc>
-  <lastmod>2023-04-30T05:40:10+00:00</lastmod>
+  <lastmod>2023-05-03T03:23:29+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://proj5.herokuapp.com/accounts/password/reset/</loc>
-  <lastmod>2023-04-30T05:40:10+00:00</lastmod>
+  <lastmod>2023-05-03T03:23:29+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
