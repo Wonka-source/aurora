@@ -1,15 +1,15 @@
 ﻿# Readme
 
 ## Table of contents
-* [Theme, Epic and User stories](#Theme,epicandeserstories)
+* [Theme, Epic and User stories](#Theme-epic-and-ueser-stories)
 * [Planning](#Planning)
-* [Design and UX](#Designandux)
-* [Wireframes](#Wireframes)
-* [Database Model](#Databasemodel)
+* [Design and UX](#Design-and-ux)
+* [Wireframes](#Wire-frames)
+* [Database Model](#Database-model)
 * [Features](#Features)
-* [Future Features](#Futurefeatures)
-* [SEO and Marketing](#SEOandmarketing)
-* [Technologies Used](#Technologiesused)
+* [Future Features](#Future-features)
+* [SEO and Marketing](#Seo-and-marketing)
+* [Technologies Used](#Technologies-used)
 * [Testing](#Testing)
 * [Deployment](#Deployment)
 * [Resources](#Resources)

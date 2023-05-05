@@ -6,37 +6,38 @@ For keyword research I used Wordtracker and Google searches - "related searches"
 Here are the results from Wordtracker:
 The first column is volume, then competition and IAAT:
 
-Watch shop:
+#### Watch shop:
 
 ![Word tracker screen shot](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683288350/firefox_l82QLwKjFk_vr1ctd.jpg)
 
-Luxery watch:
+#### Luxery watch:
 
 ![Word tracker screen shot](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683248375/firefox_ABgPcj7CzW_ifpymk.jpg)
 
-How to repair a watch:
+#### How to repair a watch:
 
 ![Word tracker screen shot](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683248745/firefox_Dd4nnXQeNq_qdemkr.jpg)
 
-Watch servicing:
+#### Watch servicing:
 
 ![Word tracker screen shot](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683287615/firefox_AcJi6z49pM_j0aid0.jpg)
 
-Automatic watches:
+#### Automatic watches:
 
 ![Word tracker screen shot](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683286553/firefox_ZLCP2wSbKK_frmgwv.jpg)
 
-Quartz watches:
+#### Quartz watches:
 
 ![Word tracker screen shot](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683286767/firefox_0xIyAEjAeu_b9o7oq.jpg)
 
-Mechanical watches:
+#### Mechanical watches:
 
 ![Word tracker screen shot](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683286947/firefox_g4K0m1Bv7C_gonhf3.jpg)
 
-Chronograph watches:
+#### Chronograph watches:
 
 ![Word tracker screen shot](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683287726/firefox_DR8pSrHeaA_ombamh.jpg)
+
 
 In the end keywords I picked are:
 watch repair near me, watch repair shop near me, watch repair shops near me, mens chronograph watches, automatic watch repair near me, citizen watch service, watch service near me,  high accuracy quartz watches, omega watch repairs, watch repairs, watch cleaning service, lancco watch repairs, silver chronograph watch, watch repairs shropshire, watch plating service chronograph watch, rotary watch repairs near me, how many hours it take to service a watch, casio women's analogue quartz watch with stainless steel bracelet, watch case repairs, watch service centre near me, luxery watches for men, luxery watches for women, luxery watches, watch shop, the watch shop, watch shop near me, watch, luxury watch, high-end watch, timepiece, horology, luxury lifestyle.
