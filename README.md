@@ -1,20 +1,20 @@
 ﻿# Readme
 
 ## Table of contents
-* [Theme, Epic and User stories](#Theme, Epic and User stories)
+* [Theme, Epic and User stories](#Theme,EpicandUserstories)
 * [Planning](#Planning)
-* [Design and UX](#Design and UX)
-* [Wireframes](#)
-* [Database Model](#)
-* [Features](#)
-* [Future Features](#)
-* [SEO and Marketing](#)
-* [Technologies Used](#)
-* [Testing](#)
-* [Deployment](#)
-* [Resources](#)
-* [Credits](#)
-* [Acknowledgments](#)
+* [Design and UX](#DesignandUX)
+* [Wireframes](#Wireframes)
+* [Database Model](#DatabaseModel)
+* [Features](#Features)
+* [Future Features](#FutureFeatures)
+* [SEO and Marketing](#SEOandMarketing)
+* [Technologies Used](#TechnologiesUsed)
+* [Testing](#Testing)
+* [Deployment](#Deployment)
+* [Resources](#Resources)
+* [Credits](#Credits)
+* [Acknowledgments](#Acknowledgments)
 
 
 Name: Aurora Watch Experts
@@ -23,6 +23,8 @@ Name: Aurora Watch Experts
 Screenshot:
 ![Site screenshot](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683309022/chrome_xwg6eqYNjn_uwkich.jpg)
 
+## Planning
+In the GitHub repository Issues were used as an Agile tool for the project. User stories were defined using Github issues. Development of each of the user stories were managed using a Kanban board.
 
 ## Theme, Epic and User stories
 
@@ -88,10 +90,6 @@ As a **owner/staff** I can **respond to customer inquiries** so that **customers
 
 As a **owner/staff** I can **add new products to the site** so that **customers can browse and purchase them**
 
-
-
-## Planning
-In the GitHub repository Issues were used as an Agile tool for the project. User stories were defined using Github issues. Development of each of the user stories were managed using a Kanban board.
 
 
 ## Design and UX
@@ -332,7 +330,7 @@ link located on the bottom left of the footer:
 - User search abilities as the shop gets bigger.
 
 ## SEO and Marketing
-link to SEO
+[link to SEO and Marketing](./SEO_AND_MARKETING.md)
 
 ## Technologies Used
 ### Languages:
@@ -357,7 +355,7 @@ link to SEO
 - Gitpod
 
 ## Testing
-link to testing
+[link to testing](./TESTING_README.md)
 
 ## Deployment
 
