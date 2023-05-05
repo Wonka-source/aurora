@@ -1,7 +1,21 @@
 ﻿# Readme
 
 ## Table of contents
-[]
+* [Theme, Epic and User stories](#Theme, Epic and User stories)
+* [Planning](#Planning)
+* [Design and UX](#Design and UX)
+* [Wireframes](#)
+* [Database Model](#)
+* [Features](#)
+* [Future Features](#)
+* [SEO and Marketing](#)
+* [Technologies Used](#)
+* [Testing](#)
+* [Deployment](#)
+* [Resources](#)
+* [Credits](#)
+* [Acknowledgments](#)
+
 
 Name: Aurora Watch Experts
 [Live link](https://proj5.herokuapp.com/)
@@ -102,40 +116,40 @@ The final site grew to be more than that represented in the wireframes, with the
 
 The wireframes are a mix of hand drawn and graphic.
 
-##### Home page:
+#### Home page:
 
 ![wireframe of the home page](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683149425/Home_sffevu.png)
 
-##### Shop page:
+#### Shop page:
 
 ![wireframe of the shop page](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683149425/shop_euchvs.png)
 
-##### Shop page: 
+#### Shop page: 
 
 ![wireframe of the Shop page hand drawn](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683149705/shop_unpdhp.png)
 
-##### Product Detail:
+#### Product Detail:
 
 ![wireframe product detail hand drawn](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683149705/product_detail_cv24vk.png)
 
-Edit Product (staff only)
+#### Edit Product (staff only)
 
 ![wireframe of the edit product page hand drawn](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683149705/edit_product_hpq4rs.png)
 
-##### Cart:
+#### Cart:
 
 ![wireframe cart](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683149425/cart_tzwull.png)
 
-##### Checkout:
+#### Checkout:
 
 ![wireframe of the checkout hand drawn](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683149705/checkout_wonrla.png)
 
-##### Profile/Order history:
+#### Profile/Order history:
 
 ![wireframe Profile/Order history hand drawn](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683149705/order_hystory_lskdji.png)
 
 
-##### About us:
+#### About us:
 
 ![wireframe of the about us page hand drawn](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683149705/about_us_nl929m.png)
 
@@ -145,6 +159,7 @@ Edit Product (staff only)
 ## Database Model
 
 ![Database model](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683207113/Database_ER_diagram_crow_s_foot_ceyshg.png)
+
 Diagram made in Lucidchart
 
 ## Features
@@ -187,6 +202,7 @@ for mobile views:
 ![shop page](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683157161/shop_page_aluog9.jpg)
 
 #### Product detail:
+user can add to the quantity
 
 ![product detail](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683157251/product_detail_ffaiav.jpg)
 
@@ -256,7 +272,9 @@ A closer look at the order history on the user profile page:
 here the user can submit an enquiry to get an estimate on a repair or service:
 
 ![repair nav item](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683198856/repaire_nav_item_vknvfp.jpg)
+
 ![watch repair form](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683198682/watch_repair_form_zj32at.jpg)
+
 ![repair message submitted, user feedback](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683198888/repair_user_feedback_umldbd.jpg)
 
 
@@ -309,9 +327,9 @@ link located on the bottom left of the footer:
 
 
 ## Future Features
-The ability for staff to manage orders in the UI.
-The ability for staff to create blog posts in the UI.
-User search abilities as the shop gets bigger.
+- The ability for staff to manage orders in the UI.
+- The ability for staff to create blog posts in the UI.
+- User search abilities as the shop gets bigger.
 
 ## SEO and Marketing
 link to SEO
@@ -343,8 +361,7 @@ link to testing
 
 ## Deployment
 
-### Deployment:
-#### Heroku and ElephantSQL:
+### Heroku and ElephantSQL:
 -   Create Heroku account
 -   Click "New" button on the top right of the dashboard
 -   Choose a region and a name for the project, then click "Create app"
@@ -366,7 +383,7 @@ link to testing
 -   Now import env.py to settings.py
 -   Run the command "python manage.py migrate"
 -   Add, commit and push your project to GitHub
-#### Congfig vars:
+### Congfig vars:
 -   Go back to the Heroku dashboard open the Settings tab
 -   Reveal the config vars and add Cloudinary and Postgres config vars and the secret key
 
@@ -374,7 +391,7 @@ link to testing
 -   Connect Heroku to your Github repo you can choose automatic or manual deployment, I used manual.
 -   Then push your code to update the app.
 
-#### Update Heroku in the terminal:
+### Update Heroku in the terminal:
 -  Navigate to  [https://dashboard.heroku.com/account/applications](https://dashboard.heroku.com/account/applications)
 
 -  In Authorizations click on create authorization button
@@ -386,15 +403,15 @@ link to testing
 - in the terminal: run python manage.py collectstatic
 - then run: git push heroku main
 
-#### Forking and Cloning:
-### Forking:  
+### Forking and Cloning:
+#### Forking:  
 - Go to the repository in Github
 
 - Click on the fork button on the top right of the screen
 
 - Github will then automatically create a repo that is forked from the original
 
-### Cloning:
+#### Cloning:
 
 - In the repository click on the green "Code" button
 
