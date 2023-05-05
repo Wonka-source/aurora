@@ -53,7 +53,7 @@ The site was tested on and in the following browsers, heres the results:
 
 ![blog](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683236389/blogg_yn1s2s.jpg)
 
-![checkout](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683236389/checkoutt_vi4kxr.jpg)
+![checkout](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683315936/soffice.bin_rNc221UEwu_xy0dsi.jpg)
 
 ![shop](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683315698/soffice.bin_7JY6ri7kRW_wvngfm.jpg)
 
