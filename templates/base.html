@@ -10,7 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
     <meta name="description"
-        content="Aurora Watch Experts is your go-to destination for luxury watches and expert watch repairs. We've a wide selection of high-end timepieces and our watch experts are highly regarded in the industry.">
+        content="Aurora Watch Experts specializing in luxury watch repairs. Our shop has a wide selection of high-end timepieces and our team of experts are highly regarded in the industry.">
+    <meta name="keywords"
+        content="watch repair near me, watch repair shop near me, watch repair shops near me, mens chronograph watches, automatic watch repair near me, citizen watch service, watch service near me,  high accuracy quartz watches, omega watch repairs, watch repairs, watch cleaning service, lancco watch repairs, silver chronograph watch, watch repairs shropshire, watch plating service chronograph watch, rotary watch repairs near me, how many hours it take to service a watch, casio women's analogue quartz watch with stainless steel bracelet, watch case repairs, watch service centre near me, luxery watches for men, luxery watches for women, luxery watches, watch shop, the watch shop, watch shop near me, watch, luxury watch, high-end watch, timepiece, horology, luxury lifestyle">
     <!-- Facebook meta tags -->
     <meta property="og:url" content="https://proj5.herokuapp.com/">
     <meta property="og:type" content="website">
@@ -94,7 +96,7 @@
                                 href="{% url 'about' %}"><i class="fa-sharp fa-solid fa-book"></i><br>About Us</a>
                         </li>
                         {% if request.user.is_authenticated %}
-                        {% if request.user.is_superuser %}
+                        {% if request.user.is_staff %}
                         <li class="nav-item">
                             <a class="nav-link text-center {% if request.path == '/shop/add/' %}active{% endif %}"
                                 href="{% url 'add_product' %}"><i class="fa-sharp fa-solid fa-plus"></i><br>Add
@@ -189,12 +191,13 @@
             <div class="row align-items-center">
                 <div class="col-12 col-md-4 text-center text-md-start mb-3 mb-md-0">
                     <a href="https://www.facebook.com/people/Aurora-Watch-Experts/100091757028913/" target="_blank"
-                        class="m-0 p-0 text-reset">Follow us on Facebook <i class="fab fa-facebook-square"></i>&nbsp;</a>
-                        {% if not request.path == '/' %}
+                        class="m-0 p-0 text-reset">Follow us on Facebook <i
+                            class="fab fa-facebook-square"></i>&nbsp;</a>
+                    {% if not request.path == '/' %}
                     <p>aurora.watch.experts@aurora.ie</p>
                     {% endif %}
                     <a href="https://www.privacypolicygenerator.info/live.php?token=w8g26lERnVGIq3QValsPcMI56jTzFGBX"
-                    target="_blank" class="text-reset">Privacy Policy</a>
+                        target="_blank" class="text-reset">Privacy Policy</a>
                 </div>
                 {% if request.path == '/' %}
                 <div class="col-12 col-md-4 text-center mb-1 mb-md-0 ">
@@ -238,10 +241,10 @@
                     {% else %}
                     <div class="col-12 col-md-4 text-center text-md-end m-0 p-0">
                         <p>&copy; 2023 Aurora Watch Experts. All Rights Reserved.</p>
-                    {% endif %}
+                        {% endif %}
+                    </div>
                 </div>
             </div>
-        </div>z
     </footer>
 
 
