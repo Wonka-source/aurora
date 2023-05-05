@@ -1,7 +1,7 @@
 ﻿# Readme
 
 ## Table of contents
-* [Theme, Epic and User stories](#theme,-epic-and-ueser-stories)
+* [Theme, Epic and User stories](#theme,-epic-and-user-stories)
 * [Planning](#Planning)
 * [Design and UX](#design-and-ux)
 * [Wireframes](#wireframes)
