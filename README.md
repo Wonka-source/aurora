@@ -66,7 +66,7 @@ As a **user** I can **create an account** so that **I can view my orders and ord
 
 
 
-##### Owner/staff
+##### Owner/staff:
 
 As a **owner/staff**, I can **process payments from users** so that **they can pay for the products they are purchasing**
 
@@ -130,7 +130,7 @@ The wireframes are a mix of hand drawn and graphic.
 
 ![wireframe product detail hand drawn](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683149705/product_detail_cv24vk.png)
 
-#### Edit Product (staff only)
+#### Edit Product (staff only):
 
 ![wireframe of the edit product page hand drawn](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683149705/edit_product_hpq4rs.png)
 
@@ -162,9 +162,9 @@ Diagram made in Lucidchart
 
 ## Features
 
-#### Home page  
+#### Home page:  
 
-a landing page with a heading "The Watch Shop" and a call to action button "Shop Now":
+A landing page with a heading "The Watch Shop" and a call to action button "Shop Now":
 
 ![site home page](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683151069/home_page_egrbdc.jpg)
 
@@ -186,12 +186,12 @@ Staff logged in (with the addition of Add Product):
 ![staff nav bar](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683151785/staff_navbar_rxjkph.jpg)
 
 #### Hamburger Navbar 
-for mobile views:
+For mobile views:
 
 ![hamburger navbar for mobile views](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683152052/navbar_hamberger_gzprya.jpg)
 
 #### Drop down menu 
-for mobile views:
+For mobile views:
 
 ![Drop down menu for mobile views](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683152187/mobile_drop_down_menu_zocdtv.jpg)
 
@@ -200,12 +200,12 @@ for mobile views:
 ![shop page](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683157161/shop_page_aluog9.jpg)
 
 #### Product detail:
-user can add to the quantity
+User can add to the quantity
 
 ![product detail](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683157251/product_detail_ffaiav.jpg)
 
 #### Cart - 
-user can adjust the quantity and update the cart and remove items form the cart accordingly:
+User can adjust the quantity and update the cart and remove items form the cart accordingly:
 
 ![cart page](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683157432/shopping_cart_hoqna3.jpg)
 
@@ -233,7 +233,7 @@ user can adjust the quantity and update the cart and remove items form the cart 
 ![order shipping details form](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683157941/order_shipping_details_a5gahm.jpg)
 
 #### Save information to profile - 
-option for logged in users:
+Option for logged in users:
 
 ![Save information to profile feature](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683158035/option_to_save_as_default_shipping_yfdwti.jpg)
 
@@ -243,7 +243,7 @@ option for logged in users:
 ![Create account or log in to save this information](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683158123/create_account_or_login_to_save_this_info_ezcwgv.jpg)
 
 #### Stripe payments - 
-amount to be charged displayed clearly:
+Amount to be charged displayed clearly:
 
 ![Stripe payments](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683158192/stripe_payment_u26xhj.jpg)
 
@@ -267,7 +267,7 @@ A closer look at the order history on the user profile page:
 
 
 #### Repairs page - 
-here the user can submit an enquiry to get an estimate on a repair or service:
+Here the user can submit an enquiry to get an estimate on a repair or service:
 
 ![repair nav item](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683198856/repaire_nav_item_vknvfp.jpg)
 
@@ -316,7 +316,7 @@ here the user can submit an enquiry to get an estimate on a repair or service:
 ![enter image description here](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683198410/aboutus_bptcof.jpg)
 
 #### Privacy policy - 
-link located on the bottom left of the footer:
+Link located on the bottom left of the footer:
 
 ![footer link to privacy policy](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683163060/privacy_policy_link_mk9joy.jpg)
 
@@ -327,6 +327,7 @@ link located on the bottom left of the footer:
 ## Future Features
 - The ability for staff to manage orders in the UI.
 - The ability for staff to create blog posts in the UI.
+- The ability for staff to manage repairs and service enquiries in the UI.
 - User search abilities as the shop gets bigger.
 
 ## SEO and Marketing
