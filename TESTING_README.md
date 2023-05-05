@@ -1,8 +1,12 @@
 ﻿## Testing Readme
 ### Code validation:
+
 - [CI Python Linter](https://pep8ci.herokuapp.com)
+
 - [Javascript validator](https://jshint.com/)
+
 - [HTML validator](https://validator.w3.org/)
+
 - [CSS validator](https://jigsaw.w3.org/css-validator/)
 
 
@@ -51,7 +55,7 @@ The site was tested on and in the following browsers, heres the results:
 
 ![checkout](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683236389/checkoutt_vi4kxr.jpg)
 
-![shop](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683244353/soffice.bin_bHk4aopUb8_xblzbn.jpg)
+![shop](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683315698/soffice.bin_7JY6ri7kRW_wvngfm.jpg)
 
 ![about](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683236388/aboutuss_tieuhb.jpg)
 

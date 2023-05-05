@@ -39,7 +39,8 @@ The first column is volume, then competition and IAAT:
 ![Word tracker screen shot](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683287726/firefox_DR8pSrHeaA_ombamh.jpg)
 
 
-In the end keywords I picked are:
+#### In the end keywords I picked are:
+
 watch repair near me, watch repair shop near me, watch repair shops near me, mens chronograph watches, automatic watch repair near me, citizen watch service, watch service near me,  high accuracy quartz watches, omega watch repairs, watch repairs, watch cleaning service, lancco watch repairs, silver chronograph watch, watch repairs shropshire, watch plating service chronograph watch, rotary watch repairs near me, how many hours it take to service a watch, casio women's analogue quartz watch with stainless steel bracelet, watch case repairs, watch service centre near me, luxery watches for men, luxery watches for women, luxery watches, watch shop, the watch shop, watch shop near me, watch, luxury watch, high-end watch, timepiece, horology, luxury lifestyle.
 
 ## SEO

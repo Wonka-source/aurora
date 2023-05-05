@@ -1,20 +1,20 @@
 ﻿# Readme
 
 ## Table of contents
-* [Theme, Epic and User stories](#Theme-epic-and-ueser-stories)
+* [Theme, Epic and User stories](#theme-epic-and-ueser-stories)
 * [Planning](#Planning)
-* [Design and UX](#Design-and-ux)
-* [Wireframes](#Wire-frames)
-* [Database Model](#Database-model)
-* [Features](#Features)
-* [Future Features](#Future-features)
-* [SEO and Marketing](#Seo-and-marketing)
-* [Technologies Used](#Technologies-used)
-* [Testing](#Testing)
-* [Deployment](#Deployment)
-* [Resources](#Resources)
-* [Credits](#Credits)
-* [Acknowledgments](#Acknowledgments)
+* [Design and UX](#design-and-ux)
+* [Wireframes](#wire-frames)
+* [Database Model](#database-model)
+* [Features](#features)
+* [Future Features](#future-features)
+* [SEO and Marketing](#seo-and-marketing)
+* [Technologies Used](#technologies-used)
+* [Testing](#testing)
+* [Deployment](#deployment)
+* [Resources](#resources)
+* [Credits](#credits)
+* [Acknowledgments](#acknowledgments)
 
 
 Name: Aurora Watch Experts
