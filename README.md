@@ -1,10 +1,10 @@
 ﻿# Readme
 
 ## Table of contents
-* [Theme, Epic and User stories](#theme-epic-and-ueser-stories)
+* [Theme, Epic and User stories](#theme,-epic-and-ueser-stories)
 * [Planning](#Planning)
 * [Design and UX](#design-and-ux)
-* [Wireframes](#wire-frames)
+* [Wireframes](#wireframes)
 * [Database Model](#database-model)
 * [Features](#features)
 * [Future Features](#future-features)

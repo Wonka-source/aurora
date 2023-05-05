@@ -4,6 +4,7 @@
 
 For keyword research I used Wordtracker and Google searches - "related searches" and "auto completion" .
 Here are the results from Wordtracker:
+
 The first column is volume, then competition and IAAT:
 
 #### Watch shop:
