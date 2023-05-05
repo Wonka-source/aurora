@@ -1,7 +1,7 @@
 ﻿# Readme
 
 ## Table of contents
-* [Theme, Epic and User stories](#theme,-epic-and-user-stories)
+* [Theme, Epic and User Stories](#theme-epic-and-user-stories)
 * [Planning](#Planning)
 * [Design and UX](#design-and-ux)
 * [Wireframes](#wireframes)
@@ -26,7 +26,7 @@ Screenshot:
 ## Planning
 In the GitHub repository Issues were used as an Agile tool for the project. User stories were defined using Github issues. Development of each of the user stories were managed using a Kanban board.
 
-## Theme, Epic and User stories
+## Theme, Epic and User Stories
 
 ### Theme
 To sell high end luxery watches online, and provide watch servicing and repairs.
