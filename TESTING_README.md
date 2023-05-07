@@ -64,4 +64,4 @@ The site was tested on and in the following browsers, heres the results:
 ## Known bugs
 During manual testing, a bug was discovered where when a staff member deletes a product from the shop, the product would still remain in a user's session-data if it was added to their cart. 
 I added some more code to the "delete product" view and looped over the items in the cart session, if the item matched the id of the deleted item it was then deleted from the session.
-No other bugs are known.
+No other bugs known.
