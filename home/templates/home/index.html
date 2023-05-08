@@ -2,19 +2,25 @@
 {% load static %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/home.css' %}">
+<link rel="stylesheet" href="{% static 'css/repairs.css' %}">
 {% endblock %}
 
 {% block extra_title %} - Home{% endblock %}
 
 {% block content %}
-
-<div class="container-fluid container-shop-now d-flex flex-column overlay justify-content-center align-items-center vh-100">
-    <h2 class="display-3 logo-font text-white mb-4">
-        The Watch Shop
-    </h2>
-    <a href="{% url 'shop' %}" class=" dispaly-5 btn btn-lg text-uppercase py-3 shop-now-button">
-        Shop Now
-    </a>
+<div class="overlay"></div>
+<div class="container col-md-8 my-5 pb-4 ">
+    <div class="row mt-5">
+        <div class="col-12 col-md-8 mx-auto">
+            <h2 class="text-white display-3 logo-font text-center mb-5">The Watch Shop</h2>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="">
+            <a href="{% url 'shop' %}" class="dispaly-5 btn btn-dark text-uppercase py-3 text-white px-5">
+                Shop Now
+            </a>
+        </div>
+    </div>
 </div>
 {% endblock %}

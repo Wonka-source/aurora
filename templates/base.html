@@ -8,7 +8,7 @@
     {% block meta %}
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
     <meta name="description"
         content="Aurora Watch Experts specializing in luxury watch repairs. Our shop has a wide selection of high-end timepieces and our team of experts are highly regarded in the industry.">
     <meta name="keywords"
@@ -64,8 +64,10 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid container-lg w-100">
                 <a class="navbar-brand" href="{% url 'home' %}">
-                    <h1 class="logo-font my-0"><span class="green"><strong>Aurora</strong></span> <span
-                            class="grey">Watch Experts</span></h1>
+                    <h1 class="logo-font my-0">
+                        <span class="green d-none d-sm-inline"><strong>Aurora</strong></span> <span
+                            class="grey d-none d-sm-inline">Watch Experts</span>
+                    <span class="green"><strong class="d-block d-sm-none">AWE</strong></span></h1>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
