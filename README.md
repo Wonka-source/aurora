@@ -310,7 +310,7 @@ Here the user can submit an enquiry to get an estimate on a repair or service:
 
 #### About us - Meet our team:
 
-![about us nav item](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683200489/about_us_navitem_pzu6eh.jpg)
+![about us nav item](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683584278/static/images/chrome_UonNK5rRlz_yqihzs.jpg)
 ![enter image description here](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683198410/aboutus_bptcof.jpg)
 
 #### Privacy policy - 
