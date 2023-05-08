@@ -23,9 +23,6 @@ Name: Aurora Watch Experts
 Screenshot:
 ![Site screenshot](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683309022/chrome_xwg6eqYNjn_uwkich.jpg)
 
-## Planning
-In the GitHub repository Issues were used as an Agile tool for the project. User stories were defined using Github issues. Development of each of the user stories were managed using a Kanban board.
-
 ## Theme, Epic and User Stories
 
 ### Theme
@@ -33,7 +30,7 @@ To sell high end luxery watches online, and provide watch servicing and repairs.
 
 
 ### Epic
-This site will provide the user with a selection of luxery watches accessories, and watch tools to purchase. The website will also have a form to fill out to get an estimate for a watch repair or service.  
+This site will provide the user with a selection of luxery watches accessories such as watch straps and watch tools to purchase. The site accommodates enquires for a watch service or repair where the user can fill out a form explaining the issue and a staff member would get back to them with a quote.
 
 ### User stories
 #### User:
@@ -90,7 +87,8 @@ As a **owner/staff** I can **respond to customer inquiries** so that **customers
 
 As a **owner/staff** I can **add new products to the site** so that **customers can browse and purchase them**
 
-
+## Planning
+In the GitHub repository Issues were used as an Agile tool for the project. User stories were defined using Github issues. Development of each of the user stories were managed using a Kanban board.
 
 ## Design and UX
 
@@ -303,11 +301,11 @@ Here the user can submit an enquiry to get an estimate on a repair or service:
 
 #### Staff product management, edit product:
 
-![edit product page](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683162267/edit_product_wbmo26.jpg)
+![edit product page](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683580864/chrome_yBgKUYOJh9_oeknc3.jpg)
 
 #### Staff product management, delete product:
 
-![Staff product management, delete product](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683162417/deleteproduct_jvddmo.jpg)
+![Staff product management, delete product](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683580864/chrome_v5nUOtPFA4_d1kuhs.jpg)
 
 
 #### About us - Meet our team:
