@@ -398,7 +398,7 @@ Link located on the bottom left of the footer:
 - log in with your email
 -  when it prompts for password enter the authorization token
 - in the terminal: run python manage.py collectstatic
-- then run: git push heroku main
+- then in the terminal run: git push heroku main
 
 ### Forking and Cloning:
 #### Forking:  

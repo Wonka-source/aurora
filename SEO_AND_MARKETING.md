@@ -51,6 +51,22 @@ Some of thees keywords throughout the site using the about us section and a blog
 
 ![blog](https://res.cloudinary.com/dmvf3llw4/image/upload/v1683199156/blog_post_f8uyly.jpg)
 
+## Business Model 
+B2C business:
+
+Whats do the users need?
+
+1. A luxery watch 
+
+2. A watch service/repair.
+
+The site is for someone who is interested in purchasing a luxery watch or owns a watch and would like to get it serviced or repaired.
+
+The shop displays the good quality images of the watches and has a description of each. The UI is easy and intuitive and the payment process is simple and strateforward to purchase watches. 
+
+For a service or repair the user can navigate to the repair page where they can fill out a form about the watch they need serviced or repaired. A staff member receives the enquiry in the back end and gets back to the customer/user with a quote/estimate on the works that need to be done.
+
+
 ## Marketing Strategies:
 For the marketing strategies I used the facebook socialmedia platform and made a page for te store.  I've put a link to the page the footer.
 ### Facebook page:
